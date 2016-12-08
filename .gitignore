@@ -8,8 +8,8 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-/trangbongda
-/uploads
-/.idea
+trangbongda
+uploads
+.idea
 .gitignore
 
