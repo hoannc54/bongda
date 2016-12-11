@@ -643,7 +643,7 @@
       <workItem from="1481220576456" duration="29000" />
       <workItem from="1481349683169" duration="19966000" />
       <workItem from="1481428538173" duration="623000" />
-      <workItem from="1481433961250" duration="4052000" />
+      <workItem from="1481433961250" duration="4074000" />
     </task>
     <task id="LOCAL-00001" summary="ignore some file">
       <created>1481198166686</created>
@@ -666,11 +666,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481442724341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update giao dien">
+      <created>1481442748602</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1481442748602</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42860000" />
+    <option name="totallyTimeSpent" value="42882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="24" width="1329" height="744" extended-state="6" />
@@ -710,7 +717,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ignore some file" />
     <MESSAGE value="update giao" />
-    <option name="LAST_COMMIT_MESSAGE" value="update giao" />
+    <MESSAGE value="update giao dien" />
+    <option name="LAST_COMMIT_MESSAGE" value="update giao dien" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
