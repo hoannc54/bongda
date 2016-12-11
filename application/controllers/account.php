@@ -31,9 +31,7 @@ class Account extends CI_Controller {
             }
         }
         $data['title'] = 'Login';
-        $this->load->view('template/header.php', $data);
-        $this->load->view('account/login', $data);
-        $this->load->view('template/footer.php', $data);
+        $this->load->view('frontend/auth/login', $data);
     }
 
     public function signup() {
@@ -53,16 +51,12 @@ class Account extends CI_Controller {
                 $this->load->model('users_model');
                 $this->users_model->addUser();
                 $data['title'] = 'Đăng ký thành công';
-                $this->load->view('template/header', $data);
-                $this->load->view('account/signup_success', $data);
-                $this->load->view('template/footer', $data);
+                $this->load->view('frontend/auth/signup_success', $data);
                 return;
             }
         }
         $data['title'] = 'Sign Up';
-        $this->load->view('template/header', $data);
-        $this->load->view('account/signup', $data);
-        $this->load->view('template/footer', $data);
+        $this->load->view('frontend/auth/signup', $data);
     }
 
     public function logout() {

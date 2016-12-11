@@ -5,5 +5,3 @@ if ( ! function_exists('learn'))
  return ($ketqua);
 }
 
-
-}

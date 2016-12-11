@@ -43,15 +43,22 @@ class Videos_Model extends CI_Model {
         return $query->row();
     }
     
-    public function getVideosForSideBar($limit = 5) {
+    public function getVideosForSideBar($limit = 6) {
         $this->db->select('title, alias');
         $this->db->limit($limit);
         $this->db->order_by("video_id", "random");
         $query = $this->db->get('videos');
         return $query->result();
     }
-    
-    public function delete_video() {
+
+    public function getVideos($limit = 5) {
+        $this->db->select('title, alias');
+        $this->db->limit($limit);
+        $this->db->order_by("video_id", "random");
+        $query = $this->db->get('videos');
+        return $query->result();
+    }
+    public function delete_video($alias) {
         $this->db->where('alias', $alias);
         return $this->db->delete('videos');
     }

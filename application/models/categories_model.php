@@ -16,5 +16,12 @@ class Categories_Model extends CI_Model {
         }
         return $list;
     }
-    
+
+    public function getCategories() {
+        $query = $this->db->get('categories');
+        $result = $query->result();
+        return $result;
+    }
+
+
 }

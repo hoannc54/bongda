@@ -29,7 +29,7 @@ class Articles_Model extends CI_Model {
     
     // lấy các bài viết
     public function getListArticles($limit = 6, $offset = 0) {
-        $this->db->select('title, description, content, alias');
+        $this->db->select('title, description, content, alias, post_on');
         $this->db->limit($limit, $offset);
         $this->db->order_by("article_id", "desc");
         $query = $this->db->get('articles');
@@ -88,6 +88,14 @@ class Articles_Model extends CI_Model {
         $this->db->select('title, alias');
         $this->db->limit($limit);
         $this->db->order_by("article_id", "random");
+        $query = $this->db->get('articles');
+        return $query->result();
+    }
+
+    public function getArticleCategory($id){
+        $this->db->select('title, description, alias, post_on');
+        $this->db->where('category_id', $id);
+        $this->db->order_by("article_id", "desc");
         $query = $this->db->get('articles');
         return $query->result();
     }
