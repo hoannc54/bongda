@@ -2,130 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed755979-ee54-424a-8c21-f752e38c8ee5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/css/index.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/images/index.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/index30b5.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/indexbfec.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/indexc052.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/indexf8a0.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/js/index.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/index5851.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/index72c9.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/indexad3f.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/indexb70a.html.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/css/prettyPhoto4235.css.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/images/select2-spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/images/select2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/images/select2x2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min18f6.js.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.init.min18f6.js.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/WooCommerce.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/WooCommerce.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/WooCommerce.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/WooCommerced41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/flexslider-icon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/flexslider-icon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/flexslider-icon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/flexslider-icond41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/fontawesome-webfontba72.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/fontawesome-webfontba72.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/fontawesome-webfontba72.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/fontawesome-webfontd41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/glyphicons-halflings-regulard41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/star.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/star.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/star.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/stard41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icon-hd-s816aa7a6b3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icon-sd6cd4d0ec7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/presets/preset1/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/articles/detail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/auth/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/auth/signup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/auth/signup_success.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/home/content.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/home/parties/sliders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/video/display.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/video/list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/head.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/sidebar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-admin/css/color-picker.min4235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/contact-form-7/includes/css/styles5b31.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/contact-form-7/includes/js/scripts5b31.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/css/themeum-presets4235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/assets/js/themeum-presets4235.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/index30b5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/indexbfec.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/indexc052.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/indexf8a0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/themeum-presets/themeum-presets.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/css/select24235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/css/woocommerce-layout18f6.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen18f6.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min18f6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/address-i18n.min18f6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min18f6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/cart.min18f6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min18f6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/lost-password.min18f6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min18f6.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min330a.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min005e.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/plugins/woocommerce/assets/js/select2/select2.min49eb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/flexslider4235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/presets/preset14235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/socialcount4235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/woocommerce.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/WooCommerce.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/flexslider-icon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/fontawesome-webfontba72.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/fonts/star.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/ajax-loader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/ajax-loader@2x.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/amex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/diners.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/discover.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/jcb.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/laser.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/maestro.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/mastercard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/icons/credit-cards/visa.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/images/styleswitcher.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/js/jquery.fitvids.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/js/jquery.flexslider-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/js/socialcount.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/quick-style4235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/style4235.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-includes/js/comment-reply.min4235.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-includes/js/jquery/jquery-migrate.min1576.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-includes/js/jquery/jqueryc1d8.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-includes/js/wp-embed.min4235.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/frontend/wp-includes/wlwmanifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/account.php" afterPath="$PROJECT_DIR$/application/controllers/account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/test.php" afterPath="$PROJECT_DIR$/application/controllers/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/view.php" afterPath="$PROJECT_DIR$/application/controllers/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/learnGuess_helper.php" afterPath="$PROJECT_DIR$/application/helpers/learnGuess_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/articles_model.php" afterPath="$PROJECT_DIR$/application/models/articles_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/categories_model.php" afterPath="$PROJECT_DIR$/application/models/categories_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/videos_model.php" afterPath="$PROJECT_DIR$/application/models/videos_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/auth/signup_success.php" afterPath="$PROJECT_DIR$/application/views/frontend/auth/signup_success.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/main.css" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/presets/preset14235.css" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/css/presets/preset14235.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/assets/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/style4235.css" afterPath="$PROJECT_DIR$/assets/frontend/wp-content/themes/sportsline/style4235.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/wp-includes/js/jquery/jquery-migrate.min1576.js" afterPath="$PROJECT_DIR$/assets/frontend/wp-includes/js/jquery/jquery-migrate.min1576.js" />
     </list>
     <ignored path="trangbongda.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -760,7 +643,7 @@
       <workItem from="1481220576456" duration="29000" />
       <workItem from="1481349683169" duration="19966000" />
       <workItem from="1481428538173" duration="623000" />
-      <workItem from="1481433961250" duration="3993000" />
+      <workItem from="1481433961250" duration="4052000" />
     </task>
     <task id="LOCAL-00001" summary="ignore some file">
       <created>1481198166686</created>
@@ -776,11 +659,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481198285216</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update giao">
+      <created>1481442724341</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1481442724341</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42801000" />
+    <option name="totallyTimeSpent" value="42860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="24" width="1329" height="744" extended-state="6" />
@@ -819,7 +709,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ignore some file" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore some file" />
+    <MESSAGE value="update giao" />
+    <option name="LAST_COMMIT_MESSAGE" value="update giao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
