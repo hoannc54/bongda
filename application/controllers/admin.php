@@ -8,8 +8,9 @@ class Admin extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        if (check_admin() == false) {   // nếu không phải admin -> trở về trang chủ
-            redirect(base_url());
+        if (check_admin() == false) {  
+         // nếu không phải admin -> trở về trang chủ
+            
         }
     }
 
@@ -183,6 +184,18 @@ class Admin extends CI_Controller {
         }
         redirect('admin/articles_manager');
     }
+    public function delete_ticket($id) {
+        if (!isset($id) || empty($id)) {
+            redirect('admin/tickets_manager');
+        }
+        $this->load->model('tickets_model');
+        if ($this->tickets_model->delete_ticket($id) == true) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success">Đã xoá vé!</div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+        }
+        redirect('admin/tickets_manager');
+    }
 
     public function videos_manager($page = 1) {
         $per_page = 10;      // số bài viết trên một trang
@@ -230,14 +243,11 @@ class Admin extends CI_Controller {
         $this->load->view('template/footer', $data);
     }
     public function edit_user($user_id = ""){
-    if (!isset($user_id) || empty($user_id)) {
-            redirect('<?php echo base_url();?>admin/users_manager');
-        }
+   
         $this->load->model('users_model');
-        $data['user'] = $this->users_model->getUserForAdmin($user_id);
-
         $this->load->helper('form');
         if ($this->input->post()) {
+
             $this->load->library('form_validation');
             $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
 
@@ -245,27 +255,40 @@ class Admin extends CI_Controller {
             $this->form_validation->set_rules('username', 'Ten thanh vien', 'trim|required');
             $this->form_validation->set_rules('email', 'Email', 'trim|required');
             $this->form_validation->set_rules('password', 'Password', 'trim|required');
-           
+            $this->form_validation->set_rules('user_level', 'Doi tuong su dung', 'trim|required');
 
             // kiểm tra các luật
+           
             if ($this->form_validation->run() === true) {
                 // Thông báo thành công
+               
                 $this->load->model('users_model');
-                if ($this->users_model->updateArticle($user_id) == true) {
-                    $this->session->set_flashdata('message', '<div class="alert alert-success">Sửa thành viên thành công!</div>');
+                if ($this->users_model->updateUser($user_id) == true) {
+
+                    $this->session->set_flashdata('message', '<div class="alert alert-success">Sửa thanh vien thành công!</div>');
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
                 }
-                redirect(base_url().'admin/users_manager');
+               redirect('admin/users_manager');
             }
         }
-          $data['title'] = 'Edit User';
-        $data['nav_admin'] = 'edit_user';
+
+        // lấy dữ liệu cho form
+        $this->load->model('users_model');
+        $data['user'] = $this->users_model->getUserForAdmin($user_id);
+
+        // lấy dữ liệu cho dropdown
+        $this->load->model('categories_model');
+        $data['dropdownlist'] = $this->categories_model->getListCategories();
+
+        $data['title'] = 'Edit Article';
+        $data['nav_admin'] = 'users_manager';
         $this->load->view('template/header', $data);
         $this->load->view('template/nav_bar_admin', $data);
         $this->load->view('admin/edit_user', $data);
         $this->load->view('template/footer', $data);
     }
+    
     public function delete_user($user_id = 1){
     if (!isset($user_id) || empty($user_id)) {
             redirect(base_url().'admin/users_manager');
@@ -295,4 +318,128 @@ class Admin extends CI_Controller {
         $this->load->view('admin/tickets_manager', $data);
         $this->load->view('template/footer', $data);
     }
+    public function add_user(){
+        $this->load->helper('form');
+        if ($this->input->post()) {
+            $this->load->library('form_validation');
+            $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+
+            // các luật
+            $this->form_validation->set_rules('username', 'Ten nguoi su dung', 'trim|required');
+            $this->form_validation->set_rules('email', 'Email', 'trim|required');
+            $this->form_validation->set_rules('password', 'Password', 'trim|required');
+            $this->form_validation->set_rules('user_level', 'UserLevel', 'trim|required');
+
+            // kiểm tra các luật
+            if ($this->form_validation->run() === true) {
+                // Thông báo thành công
+                $this->load->model('users_model');
+                if ($this->users_model->addUser() == true) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-success">Thêm thanh vien mới thành công!</div>');
+                } else {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+                }
+                redirect(current_url());
+            }
+        }
+
+        // lấy dữ liệu cho dropdown
+        $this->load->model('users_model');
+        $data['dropdownlist'] = $this->users_model->getListUsers();
+
+        $data['title'] = 'Add a new member';
+        $data['nav_admin'] = 'add_member';
+        $this->load->view('template/header', $data);
+        $this->load->view('template/nav_bar_admin', $data);
+        $this->load->view('admin/add_user', $data);
+        $this->load->view('template/footer', $data);
+
+    }
+    public function add_ticket(){
+        $this->load->helper('form');
+        if ($this->input->post()) {
+            $this->load->library('form_validation');
+            $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+
+            // các luật
+            $this->form_validation->set_rules('name', 'Ten ve', 'trim|required');
+            $this->form_validation->set_rules('name_url', 'Duong dan den Ve', 'trim|required');
+            $this->form_validation->set_rules('img', 'Anh', 'trim|required');
+            $this->form_validation->set_rules('title',"Title: ", 'trim|required');
+            $this->form_validation->set_rules('content', 'Nội dung', 'trim|required');
+            $this->form_validation->set_rules('price',"Gia",'trim|required');
+
+            // kiểm tra các luật
+            if ($this->form_validation->run() === true) {
+                // Thông báo thành công
+                $this->load->model('tickets_model');
+                if ($this->tickets_model->addTicket() == true) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-success">Thêm ve mới thành công!</div>');
+                } else {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+                }
+                redirect(current_url());
+            }
+        }
+
+        // lấy dữ liệu cho dropdown
+        $this->load->model('tickets_model');
+        $data['dropdownlist'] = $this->tickets_model->getTicket();
+
+        $data['title'] = 'Add a new Ticket';
+        $data['nav_admin'] = 'add_ticket';
+        $this->load->view('template/header', $data);
+        $this->load->view('template/nav_bar_admin', $data);
+        $this->load->view('admin/add_ticket', $data);
+        $this->load->view('template/footer', $data);
+
+    }
+    public function edit_ticket($id=""){
+
+   
+        $this->load->model('tickets_model');
+        $this->load->helper('form');
+        if ($this->input->post()) {
+
+            $this->load->library('form_validation');
+            $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+
+            // các luật
+            $this->form_validation->set_rules('name', 'Ten ve', 'trim|required');
+            $this->form_validation->set_rules('title', 'Title', 'trim|required');
+            $this->form_validation->set_rules('price', 'Price', 'trim|required');
+            $this->form_validation->set_rules('img', 'Image', 'trim|required');
+
+            // kiểm tra các luật
+           
+            if ($this->form_validation->run() === true) {
+                // Thông báo thành công
+               
+                $this->load->model('tickets_model');
+                if ($this->tickets_model->updateTicket($id) == true) {
+
+                    $this->session->set_flashdata('message', '<div class="alert alert-success">Sửa vé thành công!</div>');
+                } else {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+                }
+               redirect('admin/tickets_manager');
+            }
+        }
+
+        // lấy dữ liệu cho form
+        $this->load->model('tickets_model');
+        $data['ticket'] = $this->tickets_model->getTicketForAdmin($id);
+        $data['id'] = $id;
+        // lấy dữ liệu cho dropdown
+        $this->load->model('tickets_model');
+        $data['dropdownlist'] = $this->tickets_model->getTicket();
+
+        $data['title'] = 'Edit Ticket';
+        $data['nav_admin'] = 'tickets_manager';
+        $this->load->view('template/header', $data);
+        $this->load->view('template/nav_bar_admin', $data);
+        $this->load->view('admin/edit_ticket', $data);
+        $this->load->view('template/footer', $data);
+    }
+    
 }

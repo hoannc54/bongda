@@ -46,6 +46,18 @@ class Users_Model extends CI_Model {
             return null;
         }
     }
+     public function updateUser($user_id = "") {
+        $title = $this->input->post('title');
+        $data = array(
+            'username' => $this->input->post('username'),
+            'email' => $this->input->post('email'),
+            'password' => sha1($this->input->post('password')),
+            'user_level' => $this->input->post('user_level')
+        );
+      
+        $this->db->where('user_id',$user_id)->limit(1);
+        return $this->db->update('users', $data);
+    }
     public function getUserForAdmin($user_id = ""){
          $this->db->select('*');
          $this->db->where('user_id',$user_id);
@@ -55,7 +67,7 @@ class Users_Model extends CI_Model {
     public function countUsers(){
         return $this->db->count_all_results('users');
     }
-    public function getlistUsers($limit = 10, $offset = 0) {
+    public function getListUsers($limit = 10, $offset = 0) {
         $query = $this->db->get('users', $limit, $offset);
         return $query->result_array();
     }

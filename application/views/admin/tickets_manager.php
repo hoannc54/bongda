@@ -12,8 +12,8 @@
         <thead>
             <tr>
                
-        <th width="30%"><center>Loại vé</center></th>
-        <th width="50%"><center>Tiêu đề</center></th>
+        <th width="30%"><center>Ten ve</center></th>
+        <th width="50%"><center>Title</center></th>
         <th width="10%"><center>Giá</center></th>
         <th width="5%"><center>Sửa</center></th>
         <th width="5%"><center>Xoá</center></th>
@@ -23,17 +23,17 @@
         <?php foreach ($list_tickets as $ticket) { ?>
             <tr>
                 <td>
-                        <?php echo $ticket['type'] ?>
+                        <?php echo $ticket['name'] ?>
                     </a>
                 </td>
-                <td><center><?php echo $ticket['description']?></center></td>
+                <td><center><?php echo $ticket['title']?></center></td>
                 <td><center><?php echo $ticket['price']?></center></td>
                 
                 
                 <td>
                     <center>
                         <a class="btn btn-primary"
-                        href="<?php echo base_url(); ?>">
+                        href="<?php echo base_url()."admin/edit_ticket/".$ticket['id'] ;?>">
                             <span class="glyphicon glyphicon-pencil"></span>
                         </a>
                     </center>
@@ -41,7 +41,7 @@
                 <td>
                     <center>
                         <a class="btn btn-danger"
-                            href="<?php echo base_url(); ?>" onclick="return confirm('Are you sure?');">
+                            href="<?php echo base_url()."admin/delete_ticket/".$ticket['id']; ?>" onclick="return confirm('Are you sure?');">
                         <span class="glyphicon glyphicon-trash"></span>
                         </a>
                     </center>
