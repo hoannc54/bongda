@@ -11,4 +11,5 @@ application/logs/*
 trangbongda
 uploads
 .idea
+.idea/.workspace.xml
 
