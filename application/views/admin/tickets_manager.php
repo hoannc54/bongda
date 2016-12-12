@@ -23,8 +23,7 @@
         <?php foreach ($list_tickets as $ticket) { ?>
             <tr>
                 <td>
-                        <?php echo $ticket['name'] ?>
-                    </a>
+                    <?php echo $ticket['name'] ?></a>
                 </td>
                 <td><center><?php echo $ticket['title']?></center></td>
                 <td><center><?php echo $ticket['price']?></center></td>

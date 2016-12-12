@@ -19,7 +19,7 @@ if ( ! function_exists('check_admin'))
     {
         $CI =& get_instance();
         $user_level = $CI->session->userdata('user_level');
-        if ($user_level != null && $user_level == 2) {
+        if ($user_level != null && $user_level > 0) {
             return true;
         } else {
             return false;
