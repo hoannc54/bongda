@@ -12,4 +12,5 @@ trangbongda
 uploads
 .idea
 .idea/.workspace.xml
+config/database.php
 
