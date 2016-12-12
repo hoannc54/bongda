@@ -270,9 +270,7 @@ class View extends CI_Controller {
         //Du lieu sidebar
         $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
         $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
-
-        $this->load->view('templates/header');
+        
         $this->load->view('frontend/articles/detail', $data);
-        $this->load->view('templates/footer');
     }
 }

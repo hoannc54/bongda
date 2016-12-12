@@ -2,7 +2,7 @@
 <html lang="en-US">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 <head>
-    <?php $this->load->view('templates/head')?>
+    <?php $this->load->view('frontend/templates/head')?>
 </head>
 <body class="home page page-id-26 page-template-default">
 <header role="banner">
@@ -21,14 +21,14 @@
                 <div id="image_widget-3" class="widget widget_image_widget">
                     <?php if(check_login()== true):?>
                         <span>Xin chào: <?php echo $this->session->userdata('username') ?></span>
-                        <a href="<?php echo base_url();?>account/logout">
+                        <a href="<?php echo base_url();?>account/logout" class="btn btn-warning">
                             Đăng xuất
                         </a>
                     <?php else:?>
-                        <a href="<?php echo base_url();?>account/login">
+                        <a href="<?php echo base_url();?>account/login" class="btn btn-success">
                             Đăng nhập
                         </a>
-                        <a href="<?php echo base_url();?>account/signup">
+                        <a href="<?php echo base_url();?>account/signup" class="btn btn-info">
                             Đăng ký
                         </a>
                     <?php endif;?>

@@ -8,9 +8,9 @@ class Admin extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('users_model');
-        if (check_admin() == false) {  
-         // nếu không phải admin -> trở về trang chủ
-            
+        if (check_admin() == false) {
+            redirect(base_url());
+
         }
     }
 

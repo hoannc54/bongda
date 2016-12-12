@@ -10,11 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/10/favicon.png" rel="icon" type="image/x-icon"/>
 
-<link rel="alternate" type="application/rss+xml" title="Sportsline &raquo; Feed" href="indexd784.html?feed=rss2"/>
-<link rel="alternate" type="application/rss+xml" title="Sportsline &raquo; Comments Feed"
-      href="indexa6da.html?feed=comments-rss2"/>
-<link rel="alternate" type="application/rss+xml" title="Sportsline &raquo; Home Comments Feed"
-      href="indexafff.html?feed=rss2&amp;page_id=26"/>
 <script type="text/javascript">
     window._wpemojiSettings = {
         "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/72x72\/",
