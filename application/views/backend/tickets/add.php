@@ -1,8 +1,7 @@
 <?php $this->load->view('backend/templates/header')?>
     <!-- Left side column. contains the logo and sidebar -->
 <?php $this->load->view('backend/templates/leftside')?>
-    <script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
-    <script src="<?php echo base_url(); ?>assets/ckfinder/ckfinder.js"></script>
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -19,7 +18,7 @@
                     <!-- general form elements -->
                     <div class="box box-success">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Thêm mới vé</h3>
+                            <h3 class="box-title">Thêm mới thông tin vé</h3>
                         </div><!-- /.box-header -->
                         <!-- form start -->
                         <!-- Hiển thị nếu thành công -->
@@ -32,52 +31,45 @@
                         <!-- Hiển thị nếu nhập dữ liệu lỗi -->
                         <?php echo validation_errors(); ?>
                         <form enctype="multipart/form-data" action="" method="post" autocomplete="off">
-                            <!-- Tiêu đề -->
-                            <div class="form-group">
-                                <label>Ten Ve: </label>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label>Ten ve: </label>
 
-                                <input type="text" name="name" class="form-control" value="<?php echo set_value('name');?>" >
-                            </div>
-                            <div class="form-group">
-                                <label>Name_URL: </label>
-                                <input type="text" name="name_url" class="form-control" value="<?php echo set_value('name_url');?>" >
-                            </div>
-                            <div class="form-group">
-                                <label>Image </label>
-                                <input type="text" name="img" class="form-control" value="<?php echo set_value('img');?>" >
-                            </div>
-                            <div class="form-group">
-                                <label>Title </label>
-                                <input type="text" name="title" class="form-control" value="<?php echo set_value('title');?>" >
-                            </div>
-
-                            <div class="form-group">
-                                <label>Content: </label>
-                                <input type="text" name="content" class="form-control" value="<?php echo set_value('content');?>" >
-                            </div>
-                            <div class="form-group">
-                                <label>Price: </label>
-                                <input type="text" name="price" class="form-control" value="<?php echo set_value('price');?>" >
-                            </div>
-                            <!-- Save button -->
-
-                            <div class="row" style="margin-top:10px" class="form-group">
-                                <div class="col-sm-10"></div>
-                                <div class="col-sm-1 controls">
-
-                                    <input type="submit" name="submit" value="Save" class="btn btn-primary" />
+                                    <input type="text" name="name" class="form-control" value="<?php if(isset($ticket['name'])) echo $ticket['name']; ?>" >
                                 </div>
-                                <div class="col-sm-1"></div>
+                                <div class="form-group">
+                                    <label>Name_URL: </label>
+                                    <input type="text" name="name_url" class="form-control" value="<?php if(isset($ticket['name_url'])) echo $ticket['name_url'] ?>" >
+                                </div>
+                                <div class="form-group">
+                                    <label>Image: </label>
+                                    <input type="text" name="img" class="form-control" value="<?php if(isset($ticket['img'])) echo $ticket['img']?>" >
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Title: </label>
+                                    <input type="text" name="title" class="form-control" value="<?php if(isset($ticket['title'])) echo $ticket['title'];?>" >
+                                </div>
+                                <div class="form-group">
+                                    <label>Content: </label>
+                                    <input type="text" name="contents" class="form-control" value="<?php if(isset($ticket['contents'])) echo $ticket['contents'];?>" >
+                                </div>
+                                <div class="form-group">
+                                    <label>Title: </label>
+                                    <input type="text" name="price" class="form-control" value="<?php if(isset($ticket['price'])) echo $ticket['price'];?>" >
+                                </div>
+                            </div><!-- /.box-body -->
+
+                            <div class="box-footer">
+                                <a href="<?php echo base_url('admin/tickets_manager')?>" class="btn btn-warning">
+                                    Quay lại
+                                </a>
+                                <button type="submit" class="btn btn-success pull-right">Tạo mới</button>
                             </div>
                         </form>
-
                     </div><!-- /.box -->
                 </div>
             </div>
         </section>
     </div><!-- /.content-wrapper -->
-    <script type="text/javascript">
-        var editor = CKEDITOR.replace('editor');
-        CKFinder.setupCKEditor(editor, '<?php echo base_url() ?>assets/ckfinder');
-    </script>
 <?php $this->load->view('backend/templates/footer')?>

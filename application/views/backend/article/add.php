@@ -1,7 +1,7 @@
 <?php $this->load->view('backend/templates/header')?>
     <!-- Left side column. contains the logo and sidebar -->
 <?php $this->load->view('backend/templates/leftside')?>
-    <script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
+  <script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
     <script src="<?php echo base_url(); ?>assets/ckfinder/ckfinder.js"></script>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -65,7 +65,7 @@
                             </div><!-- /.box-body -->
 
                             <div class="box-footer">
-                                <a href="<?php echo base_url('admin/users_manager')?>" class="btn btn-warning">
+                                <a href="<?php echo base_url('admin/articles_manager')?>" class="btn btn-warning">
                                     Quay lại
                                 </a>
                                 <button type="submit" class="btn btn-success pull-right">Tạo mới</button>
@@ -76,8 +76,8 @@
             </div>
         </section>
     </div><!-- /.content-wrapper -->
-    <script type="text/javascript">
-        var editor = CKEDITOR.replace('editor');
-        CKFinder.setupCKEditor(editor, '<?php echo base_url() ?>assets/ckfinder');
-    </script>
+<!--    <script type="text/javascript">-->
+<!--        var editor = CKEDITOR.replace('editor');-->
+<!--        CKFinder.setupCKEditor(editor, '--><?php //echo base_url() ?>//assets/ckfinder');
+//    </script>
 <?php $this->load->view('backend/templates/footer')?>

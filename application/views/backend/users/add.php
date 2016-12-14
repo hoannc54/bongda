@@ -1,3 +1,5 @@
+
+
 <?php $this->load->view('backend/templates/header')?>
     <!-- Left side column. contains the logo and sidebar -->
 <?php $this->load->view('backend/templates/leftside')?>

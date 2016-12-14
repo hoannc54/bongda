@@ -41,6 +41,10 @@
 <script src="<?php echo base_url()?>assets/backend/dist/js/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url()?>assets/backend/dist/js/pages/dashboard.js"></script>
+<script type="text/javascript">
+    var editor = CKEDITOR.replace('editor');
+    CKFinder.setupCKEditor(editor, '<?php echo base_url() ?>assets/ckfinder');
+</script>
 <!-- AdminLTE for demo purposes -->
 <!-- <script src="dist/js/demo.js"></script> -->
 </body>
