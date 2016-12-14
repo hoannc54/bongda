@@ -7,12 +7,12 @@
 <body class="home page page-id-26 page-template-default">
 <header role="banner">
     <div class="container">
-        <div id="header" class="row">
+        <div id="header" class="row" style="padding-bottom: 30px; padding-top: 10px;">
             <div class="col-xs-6">
                 <h1 class="logo">
                     <a href="<?php echo base_url()?>">
                         <img class="img-responsive"
-                             src="<?php echo base_url();?>assets/frontend/wp-content/themes/sportsline/assets/images/presets/preset1/logo.png" alt="logo">
+                             src="<?php echo base_url();?>assets/frontend/logo.png" alt="logo">
                     </a>
                 </h1>
             </div><!-- /.col-sm-6 -->
