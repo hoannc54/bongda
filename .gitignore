@@ -8,9 +8,9 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-trangbongda
-uploads
-.idea
-.idea/.workspace.xml
+trangbongda/
+uploads/
 config/database.php
+.idea/.workspace.xml
 
+.idea/
