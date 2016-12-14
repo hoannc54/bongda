@@ -15,7 +15,7 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <div class="col-xs-offset-3 col-xs-6">
+                <div class="col-xs-offset-1 col-xs-10">
                     <!-- general form elements -->
                     <div class="box box-success">
                         <div class="box-header with-border">
