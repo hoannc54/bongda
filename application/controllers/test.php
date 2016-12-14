@@ -39,5 +39,9 @@ $this->load->view('testview',$data);
 		$this->load->view('templates/content');
 		$this->load->view('templates/footer');
 	}
+
+	public function admin(){
+		$this->load->view('backend/index');
+	}
 }
   

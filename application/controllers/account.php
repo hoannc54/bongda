@@ -23,7 +23,12 @@ class Account extends CI_Controller {
                         $this->session->set_flashdata('message', '<div class="alert alert-danger">Mật khẩu không hợp lệ!</div>');
                     } else {
                         $this->session->set_userdata($user);
-                        redirect(base_url());
+                        if(check_admin()){
+                            redirect(base_url('admin'));
+                        }else{
+                            redirect(base_url());
+                        }
+
                     }
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger">Tài khoản không tồn tại!</div>');

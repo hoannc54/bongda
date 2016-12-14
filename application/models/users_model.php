@@ -62,7 +62,7 @@ class Users_Model extends CI_Model {
          $this->db->select('*');
          $this->db->where('user_id',$user_id);
          $query = $this->db->get('users');
-         return $query->result_array();
+         return $query->result_array()[0];
     }
     public function countUsers(){
         return $this->db->count_all_results('users');

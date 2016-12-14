@@ -1,4 +1,4 @@
-<?php $this->load->view('templates/header'); ?>
+<?php $this->load->view('frontend/templates/header'); ?>
 <section id="main-body-wrapper" class="container">
     <div class="row" id="main-body">
         <div id="content" class="site-content col-md-8" role="main">
@@ -16,14 +16,22 @@
                 <header class="entry-header">
 
                     <div class="entry-thumbnail">
+                   
                         <video controls preload="auto" width="100%">
-                            <source src="<?php echo base_url().'/uploads/videos/1.mp4' ?>" type="video/mp4">
+                      
+                       
+                         
+                            
+                             <source src="<?php echo base_url().$video[0]['link']; ?>" type="video/mp4">
+                            
+                        
                             Your browser does not support the video tag.
                         </video>
+                       
                     </div>
 
                     <h2 class="entry-title">
-                        <?php echo $video->title;?>
+                        <?php echo $video[0]['title'];?>
                     </h2>
 
                     <div class="entry-meta">
@@ -50,7 +58,7 @@
                 </header><!--/.entry-header -->
 
                 <div class="entry-content">
-                    <?php echo $video->description; ?>
+                    <?php echo $video[0]['description']; ?>
                     <div class="entry-tags">Tags: <a href="index8573.html?tag=barcelona" rel="tag">Barcelona</a>, <a href="index7fd1.html?tag=brazil" rel="tag">brazil</a>, <a href="index3b9c.html?tag=premier" rel="tag">premier</a>, <a href="index53fb.html?tag=real-madrid" rel="tag">Real madrid</a></div>    </div>
 
                 <footer>
@@ -82,9 +90,9 @@
         </div><!--/#content -->
 
         <!--Right-->
-        <?php $this->load->view('templates/sidebar');?>
+        <?php $this->load->view('frontend/templates/sidebar');?>
         <!--End Right-->
 
     </div>
 </section>
-<?php $this->load->view('templates/footer'); ?>
+<?php $this->load->view('frontend/templates/footer'); ?>

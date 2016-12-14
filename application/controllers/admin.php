@@ -7,11 +7,16 @@ class Admin extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        $this->load->model('users_model');
+        if (check_admin() == false) {
+            redirect(base_url());
 
-        if (check_admin() == false) {  
-         // nếu không phải admin -> trở về trang chủ
-            
         }
+    }
+
+    public function index(){
+        $data['count_users'] = $this->users_model->countUsers();
+        $this->load->view('backend/index', $data);
     }
 
     // thêm bài viết mới
@@ -46,10 +51,10 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new article';
         $data['nav_admin'] = 'add_article';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/add_article', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('backend/templates/header', $data);
+//        $this->load->view('backend/templates/leftside', $data);
+        $this->load->view('backend/article/add', $data);
+//        $this->load->view('backend/templates/footer', $data);
     }
 
     // thêm video mới
@@ -103,10 +108,10 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new video';
         $data['nav_admin'] = 'add_video';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/add_video', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+        $this->load->view('backend/videos/add', $data);
+//        $this->load->view('template/footer', $data);
     }
 
     public function articles_manager($page = 1) {
@@ -118,10 +123,11 @@ class Admin extends CI_Controller {
         
         $data['title'] = 'Articles Manager';
         $data['nav_admin'] = 'articles_manager';
-        $this->load->view('template/header.php', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/articles_manager', $data);
-        $this->load->view('template/footer.php', $data);
+//        $this->load->view('template/header.php', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/articles_manager', $data);
+//        $this->load->view('template/footer.php', $data);
+        $this->load->view('backend/article/list',$data);
     }
 
     public function edit_article($alias = '') {
@@ -165,10 +171,10 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Edit Article';
         $data['nav_admin'] = 'articles_manager';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/edit_article', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+        $this->load->view('backend/article/edit', $data);
+//        $this->load->view('template/footer', $data);
     }
 
     // xoá bài viết
@@ -207,10 +213,11 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Video Manager';
         $data['nav_admin'] = 'videos_manager';
-        $this->load->view('template/header.php', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/videos_manager', $data);
-        $this->load->view('template/footer.php', $data);
+//        $this->load->view('template/header.php', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/videos_manager', $data);
+//        $this->load->view('template/footer.php', $data);
+        $this->load->view('backend/videos/list',$data);
     }
     
     // xoá bài viết
@@ -237,10 +244,11 @@ class Admin extends CI_Controller {
         config_paginator('admin/users_manager',$mount,$per_page);
         $data['list_users'] = $this->users_model->getListUsers($per_page, ($page - 1) * $per_page);
         $data['nav_admin'] = 'users_manager';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/users_manager', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/users_manager', $data);
+//        $this->load->view('template/footer', $data);
+        $this->load->view('backend/users/list', $data);
     }
     public function edit_user($user_id = ""){
    
@@ -283,10 +291,11 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Edit Article';
         $data['nav_admin'] = 'users_manager';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/edit_user', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/edit_user', $data);
+//        $this->load->view('template/footer', $data);
+        $this->load->view('backend/users/edit', $data);
     }
     
     public function delete_user($user_id = 1){
@@ -313,10 +322,11 @@ class Admin extends CI_Controller {
 
         $data['list_tickets'] =  $this->tickets_model->getTicket($per_page, ($page - 1) * $per_page);
         $data['nav_admin'] = 'tickets_manager';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/tickets_manager', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/tickets_manager', $data);
+//        $this->load->view('template/footer', $data);
+        $this->load->view('backend/tickets/list',$data);
     }
     public function add_user(){
         $this->load->helper('form');
@@ -349,10 +359,11 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new member';
         $data['nav_admin'] = 'add_member';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/add_user', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/add_user', $data);
+//        $this->load->view('template/footer', $data);
+        $this->load->view('backend/users/add', $data);
 
     }
     public function add_ticket(){
@@ -388,10 +399,11 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new Ticket';
         $data['nav_admin'] = 'add_ticket';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/add_ticket', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/add_ticket', $data);
+//        $this->load->view('template/footer', $data);
+        $this->load->view('backend/tickets/add',$data);
 
     }
     public function edit_ticket($id=""){
@@ -436,10 +448,11 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Edit Ticket';
         $data['nav_admin'] = 'tickets_manager';
-        $this->load->view('template/header', $data);
-        $this->load->view('template/nav_bar_admin', $data);
-        $this->load->view('admin/edit_ticket', $data);
-        $this->load->view('template/footer', $data);
+//        $this->load->view('template/header', $data);
+//        $this->load->view('template/nav_bar_admin', $data);
+//        $this->load->view('admin/edit_ticket', $data);
+//        $this->load->view('template/footer', $data);
+        $this->load->view('backend/tickets/edit',$data);
     }
     
 }

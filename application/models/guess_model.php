@@ -31,5 +31,16 @@ class Guess_Model extends CI_Model{
 		$query = $this->db->get('ranking_detail');
 		return $query->result_array();
 	}
+	public function getListMatch(){
+		$this->db->select('*');
+		$query = $this->db->get('match');
+		return $query->result_array();
+	}
+	public function getMatchById($match_id){
+		$this->db->select('*');
+		$this->db->where('match_id', $match_id);
+		$query = $this->db->get('match');
+		return $query->result_array();
+	}
  }
 

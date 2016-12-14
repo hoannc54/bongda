@@ -11,6 +11,7 @@ class View extends CI_Controller {
         $this->load->model('articles_model');
         $this->load->model('videos_model');
         $this->load->model('categories_model');
+        $this->load->model('guess_model');
     }
 
     // trang chủ
@@ -24,7 +25,7 @@ class View extends CI_Controller {
         $categories_articles = array();
         foreach ($categories as $category){
             $category_articles = $this->articles_model->getArticleCategory($category->category_id);
-
+            
             $list["articles"] = $category_articles;
             $list["category"] = $category;
             $categories_articles[] = $list;
@@ -81,6 +82,9 @@ class View extends CI_Controller {
         $per_page = 6;      // số bài viết trên một trang
         
         // cấu hình phân trang
+        $data['slider_articles'] = $this->articles_model->getListArticles(4, 0);
+        $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
+        $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
         $mount = $this->videos_model->countVideos();
         config_paginator('view/all_videos', $mount, $per_page);
         
@@ -90,11 +94,12 @@ class View extends CI_Controller {
         $data['articles_sidebar'] = $this->articles_model->getArticlesForSideBar(5);
         $data['videos_sidebar'] = $this->videos_model->getVideosForSideBar(5);
         
-        $this->load->view('template/header.php', $data);
-        $this->load->view('template/slide_bar', $data);
-        $this->load->view('videos/all_videos', $data);
-        $this->load->view('template/side_bar', $data);
-        $this->load->view('template/footer.php', $data);
+//        $this->load->view('template/header.php', $data);
+//        $this->load->view('template/slide_bar', $data);
+//        $this->load->view('videos/all_videos', $data);
+//        $this->load->view('template/side_bar', $data);
+//        $this->load->view('template/footer.php', $data);
+        $this->load->view('frontend/video/list_video',$data);
     }
     
     // xem chi tiết video
@@ -122,6 +127,8 @@ class View extends CI_Controller {
             $data['mua_giai'] = $this->input->post('mua_giai');
         }    
         $this->load->model('ranking_model');
+        $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
+        $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
         $data['regionals'] = $this->ranking_model->getRegional();
         $data['ranking'] = $this->ranking_model->getRankingDataByRegional($regional_id);
         $data['regional'] = $this->ranking_model->getRegionalById($regional_id);
@@ -130,11 +137,12 @@ class View extends CI_Controller {
         $data['articles_sidebar'] = $this->articles_model->getArticlesForSideBar(5);
         $data['videos_sidebar'] = $this->videos_model->getVideosForSideBar(5);
       
-        $this->load->view('template/header.php', $data);
-        $this->load->view('template/slide_bar', $data);
-        $this->load->view('ranking/ranking_table', $data);
-        $this->load->view('template/side_bar', $data);
-        $this->load->view('template/footer.php', $data);
+//        $this->load->view('template/header.php', $data);
+//        $this->load->view('template/slide_bar', $data);
+//        $this->load->view('ranking/ranking_table', $data);
+//        $this->load->view('template/side_bar', $data);
+//        $this->load->view('template/footer.php', $data);
+        $this->load->view('frontend/ranking/display',$data);
     }
     
     //Xem thong tin vé của trận đáu bóng.
@@ -167,26 +175,17 @@ class View extends CI_Controller {
         $this->load->view('template/side_bar', $data);
         $this->load->view('template/footer.php', $data);
     }
-     public function guess($time = '2016-11-15'){
-      $data['doi1'] = "";
-      $data['doi2'] = "";
-        //Lay lich su doi dau
-        $this->load->helper('form');
-        if($this->input->post('submit')){
-            $this->load->library('form_validation');
-            $data['doi1'] = $this->input->post('doi1');
-            $data['doi2'] = $this->input->post('doi2');
-        }
+     
+     public function guess($match_id = 1){
         $this->load->model('guess_model');
-        $data['list_team'] = $this->guess_model->getListTeam();
-        //Lay du lieu cho side bar
-        $data['articles_sidebar'] = $this->articles_model->getArticlesForSideBar(5);
-        $data['videos_sidebar'] = $this->videos_model->getVideosForSideBar(5);
-        $this->load->view('template/header.php', $data);
-        $this->load->view('template/slide_bar', $data);
-        $this->load->view('guess/main', $data);
-        $this->load->view('template/side_bar', $data);
-        $this->load->view('template/footer.php', $data);
+         $data['slider_articles'] = $this->articles_model->getListArticles(6, 0);
+         $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
+         $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
+
+         $data['list_match'] = $this->guess_model->getListMatch();
+        $data['match'] = $this->guess_model->getMatchById($match_id);
+      
+       $this->load->view('frontend/guess/listMatch', $data);
      }
      public function guess_result(){
         $doi1= "";
@@ -207,6 +206,7 @@ class View extends CI_Controller {
         }
         $this->load->model('guess_model');
         $this->load->model('ranking_model');
+        $data['match'] = $this->guess_model->getListMatch();
         $data['history1'] = $this->guess_model->getHistoryDataHomeTeam($data['doi1'],$data['doi2']);
         $data['history2'] = $this->guess_model->getHistoryDataHomeTeam($data['doi2'],$data['doi1']);
         $data['date'] = $this->guess_model->getTime($data['doi1'],$data['doi2']);
@@ -270,9 +270,7 @@ class View extends CI_Controller {
         //Du lieu sidebar
         $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
         $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
-
-        $this->load->view('templates/header');
+        
         $this->load->view('frontend/articles/detail', $data);
-        $this->load->view('templates/footer');
     }
 }

@@ -40,7 +40,7 @@ class Videos_Model extends CI_Model {
         $this->db->join('users u', 'u.user_id = v.user_id');
         $this->db->where('v.alias', $alias);
         $query = $this->db->get('videos v');
-        return $query->row();
+        return $query->result_array();
     }
     
     public function getVideosForSideBar($limit = 6) {

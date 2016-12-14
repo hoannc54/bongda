@@ -4,8 +4,9 @@ class Shopping extends CI_Controller {
     {
         
         parent::__construct();
-        $this->load->view('template/header');
-        $this->load->view('template/slide_bar');
+        $this->load->view('frontend/templates/head');
+        $this->load->view('frontend/templates/header');
+        
         $this->load->library('cart');
         $this->load->model('shopping_model');
         $this->load->helper('form');
@@ -43,7 +44,7 @@ class Shopping extends CI_Controller {
             );     
               
         $this->load->view('tickets/tem-shopping',$ndata);          
-        $this->load->view('template/footer');  
+         $this->load->view('frontend/templates/footer'); 
         }
 
     function add()
@@ -114,7 +115,7 @@ class Shopping extends CI_Controller {
                 'description'    => "Kênh bóng đá trực tuyến hiện nay còn đang chưa được phát triển, người hâm mộ chưa được tiếp xúc với giả đấu 1 cách dễ dàng"
                 );         
             $this->load->view('tickets/tem-thanhtoan',$ndata);
-             $this->load->view('template/footer');
+            $this->load->view('frontend/templates/footer');
         }
 
     function save_order()
@@ -150,7 +151,7 @@ class Shopping extends CI_Controller {
                 endforeach;
             endif;
             $this->load->view('tickets/tem-success');
-             $this->load->view('template/footer');
+            $this->load->view('frontend/templates/footer');
         }       
 } 
 ?>

@@ -8,7 +8,7 @@
     <?php echo validation_errors(); ?>
     <pre>
     <?php
-    $user = $user[0];
+        $user = $user[0];
     ?>
     </pre>
     <!-- form nhập dữ liệu -->

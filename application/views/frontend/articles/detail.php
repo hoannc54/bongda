@@ -1,3 +1,4 @@
+<?php $this->load->view('frontend/templates/header');?>
 <section id="main-body-wrapper" class="container">
     <div class="row" id="main-body">
         <div id="content" class="site-content col-md-8" role="main">
@@ -79,7 +80,8 @@
         </div>
         <!--/#content -->
 <!--Right-->
-        <?php $this->load->view('templates/sidebar');?>
+        <?php $this->load->view('frontend/templates/sidebar');?>
 <!--End Right-->
     </div>
 </section>
+<?php $this->load->view('frontend/templates/footer');?>
