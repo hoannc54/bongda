@@ -5,9 +5,10 @@
             <div class="row">
                 <div class="col-sm-8 slider-primary">
                     <div class="item-inner"><a href="index6595.html?p=459">
+
                             <div class="item-thumbnail">
                                 <img width="520" height="350"
-                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo "01.jpg"?>"
+                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
                                      class="img-responsive wp-post-image"
                                      alt="01"/>
 
@@ -31,7 +32,7 @@
                             <div class="item-inner"><a href="index4efb.html?p=405">
                                     <div class="item-thumbnail">
                                         <img width="300" height="150"
-                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/39-300x150.jpg"
+                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
                                              class="img-responsive wp-post-image"
                                              alt="39"/>
                                     </div>
@@ -59,7 +60,7 @@
                         <a href="index8a7d.html?p=301">
                             <div class="item-thumbnail">
                                 <img width="520" height="350"
-                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/23-520x350.jpg"
+                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
                                      class="img-responsive wp-post-image"
                                      alt="23"/>
                             </div>
@@ -83,7 +84,7 @@
                             <div class="item-inner"><a href="index4efb.html?p=405">
                                     <div class="item-thumbnail">
                                         <img width="300" height="150"
-                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/24-300x150.jpg"
+                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
                                              class="img-responsive wp-post-image"
                                              alt="39"/>
                                     </div>

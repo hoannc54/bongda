@@ -15,7 +15,7 @@
                                         <a href="<?php echo base_url('view/article/' . $article->alias); ?>">
                                             <img width="64"
                                                  height="64"
-                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/30-64x64.jpg"
+                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $article->img;?>"
                                                  class="img-responsive wp-post-image"
                                                  alt="30"
                                                  sizes="(max-width: 64px) 100vw, 64px"/>

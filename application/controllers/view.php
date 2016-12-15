@@ -19,7 +19,8 @@ class View extends CI_Controller {
         $data['slider_articles'] = $this->articles_model->getListArticles(6, 0);
         $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
         $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
-
+        $data['lastest_news'] = $this->articles_model->getListArticles(9,0);
+        $data['popular_news'] = $this->articles_model->getListArticles(16,0);
         $data['videos'] = $this->videos_model->getListVideos(6,0);
         $categories = $this->categories_model->getCategories();
         $categories_articles = array();
@@ -59,24 +60,7 @@ class View extends CI_Controller {
         $this->load->view('template/footer.php', $data);
     }
     
-    // xem chi tiết article
-//    public function article($alias = '') {
-//        if (!isset($alias) || empty($alias)) {
-//            redirect('view/all_articles');
-//        }
-//        $data['article'] = $this->articles_model->getArticleByAlias($alias);
-//
-//        // lấy dữ liệu cho side bar
-//        $data['articles_sidebar'] = $this->articles_model->getArticlesForSideBar(5);
-//        $data['videos_sidebar'] = $this->videos_model->getVideosForSideBar(5);
-//
-//        $this->load->view('template/header.php', $data);
-//        $this->load->view('template/slide_bar', $data);
-//        $this->load->view('articles/article', $data);
-//        $this->load->view('template/side_bar', $data);
-//        $this->load->view('template/footer.php', $data);
-//    }
-    
+
     // xem danh sách các video
     public function all_videos($page = 1) {
         $per_page = 6;      // số bài viết trên một trang
@@ -94,11 +78,7 @@ class View extends CI_Controller {
         $data['articles_sidebar'] = $this->articles_model->getArticlesForSideBar(5);
         $data['videos_sidebar'] = $this->videos_model->getVideosForSideBar(5);
         
-//        $this->load->view('template/header.php', $data);
-//        $this->load->view('template/slide_bar', $data);
-//        $this->load->view('videos/all_videos', $data);
-//        $this->load->view('template/side_bar', $data);
-//        $this->load->view('template/footer.php', $data);
+
         $this->load->view('frontend/video/list_video',$data);
     }
     
@@ -137,11 +117,7 @@ class View extends CI_Controller {
         $data['articles_sidebar'] = $this->articles_model->getArticlesForSideBar(5);
         $data['videos_sidebar'] = $this->videos_model->getVideosForSideBar(5);
       
-//        $this->load->view('template/header.php', $data);
-//        $this->load->view('template/slide_bar', $data);
-//        $this->load->view('ranking/ranking_table', $data);
-//        $this->load->view('template/side_bar', $data);
-//        $this->load->view('template/footer.php', $data);
+
         $this->load->view('frontend/ranking/display',$data);
     }
     
@@ -271,13 +247,7 @@ class View extends CI_Controller {
         }
         $data['article'] = $this->articles_model->getArticleByAlias($alias);
 
-//        // lấy dữ liệu cho side bar
-//        $data['articles_sidebar'] = $this->articles_model->getArticlesForSideBar(5);
-//        $data['videos_sidebar'] = $this->videos_model->getVideosForSideBar(5);
 
-//        $data['slider_articles'] = $this->articles_model->getListArticles(6, 0);
-
-        //Du lieu sidebar
         $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
         $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
         
