@@ -29,7 +29,7 @@ class Articles_Model extends CI_Model {
     
     // lấy các bài viết
     public function getListArticles($limit = 6, $offset = 0) {
-        $this->db->select('title, description, content, alias, post_on');
+        $this->db->select('*');
         $this->db->limit($limit, $offset);
         $this->db->order_by("article_id", "desc");
         $query = $this->db->get('articles');

@@ -7,9 +7,10 @@
                     <div class="item-inner"><a href="index6595.html?p=459">
                             <div class="item-thumbnail">
                                 <img width="520" height="350"
-                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/01-520x350.jpg"
+                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo "01.jpg"?>"
                                      class="img-responsive wp-post-image"
                                      alt="01"/>
+
                             </div>
                         </a>
                         <div class="item-content">
