@@ -4,7 +4,13 @@
 </br>
 <?php echo "DU DOAN KET QUA THI DAU CUA 2 DOI: ".$doi1." VA ".$doi2 ; ?></h2>
 <br>
-<?php 
+	<pre>
+<?php
+
+var_dump($team);
+echo $year;?>
+</pre>
+	<?php
 foreach ($history1 as $h ) {
 $thang_san_nha = $h['count_Thg'];
 $thua_san_nha = $h['count_Thua'];
@@ -113,9 +119,10 @@ $tong_mua_giai_home = $rteam1_fthg_home + $rteam1_fequal_home + $rteam1_ftag_hom
 $x2 = $rteam1_fthg_home/($tong_mua_giai_home+1);
 var_dump($x1);
 var_dump($x2);
+$x3 = $pteam1/($pteam1+$pteam2+1);
 var_dump($x3);
 //Vi tri tren bang xep hang
-$x3 = $pteam1/($pteam1+$pteam2+1);
+
 echo "<br>";
 echo "Lich su thi dau: ".$x1;
 echo "<br>";

@@ -29,7 +29,7 @@
         </form>
             <div class="panel panel-primary" style="margin:50dp;">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo "BẢNG XẾP HẠNG BÓNG ĐÁ " . $regional->regional_name." mùa giải ".$mua_giai; ?></h3>
+                    <h3 class="panel-title"><?php echo "BẢNG XẾP HẠNG BÓNG ĐÁ " . $regional->regional_name."".$mua_giai; ?></h3>
                 </div>
                 <div class="panel-body">
                     <table class="table table-bordered">

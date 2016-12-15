@@ -53,13 +53,7 @@
 
 
                 </footer>		    		<nav class="navigation post-navigation" role="navigation">
-                    <ul class="pager">
-                        <li class="previous">
-                            <a href="index4bd3.html?p=326" rel="prev"><i class="fa fa-long-arrow-left"></i> Previous</a>				</li>
 
-                        <li class="next"><a href="index221f.html?p=332" rel="next">Next <i class="fa fa-long-arrow-right"></i></a></li>
-
-                    </ul><!-- .nav-links -->
                 </nav><!-- .navigation -->
 
                 <span class='st_sharethis_large' displayText='ShareThis'></span>

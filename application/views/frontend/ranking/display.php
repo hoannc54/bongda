@@ -20,7 +20,7 @@
                                 <select name = 'mua_giai'>
                                     <?php foreach ($year as $y) {
 
-                                        echo "<option value = '".$y['year']."'>".$y['year']."</option>";
+                                        echo "<option value = '".$y['year']."'>"."Mùa giải ".$y['year']."</option>";
 
                                     } ?>
                                 </select>
@@ -35,7 +35,7 @@
                             
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title"><?php echo "BẢNG XẾP HẠNG BÓNG ĐÁ " . $regional->regional_name." mùa giải ".$mua_giai; ?></h3>
+                                    <h3 class="panel-title"><?php echo "BẢNG XẾP HẠNG BÓNG ĐÁ " . $regional->regional_name." Mùa Giải ".$mua_giai; ?></h3>
                                 </div>
                                 <div class="panel-body">
                                     <table class="table table-bordered">
@@ -78,13 +78,7 @@
 
 
                     </footer>		    		<nav class="navigation post-navigation" role="navigation">
-                        <ul class="pager">
-                            <li class="previous">
-                                <a href="index4bd3.html?p=326" rel="prev"><i class="fa fa-long-arrow-left"></i> Previous</a>				</li>
 
-                            <li class="next"><a href="index221f.html?p=332" rel="next">Next <i class="fa fa-long-arrow-right"></i></a></li>
-
-                        </ul><!-- .nav-links -->
                     </nav><!-- .navigation -->
 
                     <span class='st_sharethis_large' displayText='ShareThis'></span>

@@ -11,25 +11,31 @@
                     <span class="raquo">/</span> McNulty: Arsenal&#8217;s draw shows need to goal
                 </li>
             </ul>
+            <h1>Chọn trận đấu để dự đoán kết quả:</h1>
+            <br>
+            <form action="<?php echo base_url();?>view/guess_result" method="post">
+                <select name = 'trandau'>
+                    <?php foreach ($list_match as $lm) {
 
+                        echo "<option value = '".$lm['match_id']."'>"."Tran dau giua ".$lm['match_name']."</option>";
+
+                    } ?>
+                </select>
+                <input type="submit" name="submit" value="Dự đoán"/>
+                <br>
+                <br>
+                <h2>Danh sách trận đấu sắp diễn ra</h2>
             <article id="post-330" class="post-330 post type-post status-publish format-standard has-post-thumbnail hentry category-nfl tag-football-2 tag-goals">
                <?php
                foreach ($list_match as $lm){?>
-                   <a href="<?php echo base_url('view/guess/') . "/".$lm['match_id']; ?>" class="btn btn-info"><?php echo $lm['match_name'];?></a>
+                   <?php echo "<h3>".$lm['match_name']."</h3>";?>
+                   <?php echo $lm['date']."-".$lm['month']."-".$lm['year'];?>
                     </br>
+                    <?php echo $lm['description'];?>
                     </br>
                <?php } ?>
-                <?php
-                foreach ($match as $m){?>
-                  
-                    <?php
-                    $team1 = $m['team1'];
-                    $team2 = $m['team2'];
-                    $data['ngay'] = $m['date'];
-                    $data['thang'] = $m['month'];
-                    $data['nam'] = $m['year'];
-                    ?>
-               <?php } ?>
+
+
 
                 <div class="entry-content">
 
@@ -42,28 +48,7 @@
 
 
                 </footer>                   <nav class="navigation post-navigation" role="navigation">
-                    <ul class="pager">
-                        <li class="previous">
-                            <a href="index4bd3.html?p=326" rel="prev"><i class="fa fa-long-arrow-left"></i> Previous</a>                </li>
 
-                        <li class="next"><a href="index221f.html?p=332" rel="next">Next <i class="fa fa-long-arrow-right"></i></a></li>
-
-                    </ul><!-- .nav-links -->
-                </nav><!-- .navigation -->
-
-                <span class='st_sharethis_large' displayText='ShareThis'></span>
-                <span class='st_facebook_large' displayText='Facebook'></span>
-                <span class='st_twitter_large' displayText='Tweet'></span>
-                <span class='st_linkedin_large' displayText='LinkedIn'></span>
-                <span class='st_pinterest_large' displayText='Pinterest'></span>
-                <span class='st_email_large' displayText='Email'></span>
-                <span class='st_googleplus_large' displayText='Google +'></span>
-
-                <div id="comments" class="comments-area">
-
-
-
-                </div>
             </article><!--/#post-->
 
         </div>

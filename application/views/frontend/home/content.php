@@ -587,7 +587,7 @@
                                                         <a class="anchor-video" href="<?php echo base_url('view/video/' . $videos[$i]->alias); ?>">
                                                             <i class="fa fa-play-circle-o"></i>
                                                             <img width="280" height="155"
-                                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/41-280x155.jpg"
+                                                                 src="<?php echo base_url().$videos[$i]->image;?>"
                                                                  class="img-responsive wp-post-image"
                                                                  alt="41"
                                                                  sizes="(max-width: 280px) 100vw, 280px"/>
@@ -608,14 +608,14 @@
                                 </div>
                                 <div class="item ">
                                     <div class="row">
-                                        <?php for($i = 3; $i < 4; $i++):?>
+                                        <?php for($i = 3; $i < 6; $i++):?>
                                             <div class="col-sm-4">
                                                 <div class="item-content">
                                                     <div class="entry-image">
                                                         <a class="anchor-video" href="<?php echo base_url('view/video/' . $videos[$i]->alias); ?>">
                                                             <i class="fa fa-play-circle-o"></i>
                                                             <img width="280" height="155"
-                                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/41-280x155.jpg"
+                                                                 src="<?php echo base_url().$videos[$i]->image;?>"
                                                                  class="img-responsive wp-post-image"
                                                                  alt="41"
                                                                  sizes="(max-width: 280px) 100vw, 280px"/>
@@ -632,27 +632,6 @@
                                                 </div>
                                             </div>
                                         <?php endfor;?>
-                                    </div>
-                                </div>
-                                <div class="item ">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="item-content">
-                                                <div class="entry-image"><a class="anchor-video"
-                                                                            href="index5721.html?p=201"><i
-                                                            class="fa fa-play-circle-o"></i><img width="280" height="155"
-                                                                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/10-280x155.jpg"
-                                                                                                 class="img-responsive wp-post-image"
-                                                                                                 alt="10"
-                                                                                                 sizes="(max-width: 280px) 100vw, 280px"/></a>
-                                                </div>
-                                                <h3 class="entry-title"><a href="index5721.html?p=201">Ukraine Coach
-                                                        Mikhail Fomenko Hopes His Players Wil</a></h3>
-                                                <div class="entry-meta small"><i class="fa fa-clock-o"></i> 7:05 am <i
-                                                        class="fa fa-calendar"></i> 25 Nov 2013
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

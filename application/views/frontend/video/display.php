@@ -62,14 +62,9 @@
                     <div class="entry-tags">Tags: <a href="index8573.html?tag=barcelona" rel="tag">Barcelona</a>, <a href="index7fd1.html?tag=brazil" rel="tag">brazil</a>, <a href="index3b9c.html?tag=premier" rel="tag">premier</a>, <a href="index53fb.html?tag=real-madrid" rel="tag">Real madrid</a></div>    </div>
 
                 <footer>
-                </footer>		    		<nav class="navigation post-navigation" role="navigation">
-                    <ul class="pager">
-                        <li class="previous">
-                            <a href="index4efb.html?p=405" rel="prev"><i class="fa fa-long-arrow-left"></i> Previous</a>				</li>
+                </footer>
+                <nav class="navigation post-navigation" role="navigation">
 
-                        <li class="next"><a href="indexc79d.html?p=448" rel="next">Next <i class="fa fa-long-arrow-right"></i></a></li>
-
-                    </ul><!-- .nav-links -->
                 </nav><!-- .navigation -->
 
                 <span class='st_sharethis_large' displayText='ShareThis'></span>
@@ -80,11 +75,7 @@
                 <span class='st_email_large' displayText='Email'></span>
                 <span class='st_googleplus_large' displayText='Google +'></span>
 
-                <div id="comments" class="comments-area">
 
-
-
-                </div>
             </article><!--/#post-->
 
         </div><!--/#content -->

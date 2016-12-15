@@ -36,8 +36,10 @@ class Guess_Model extends CI_Model{
 		$query = $this->db->get('match');
 		return $query->result_array();
 	}
-	public function getMatchById($match_id){
+	public function getMatchById($match_id = 1){
+
 		$this->db->select('*');
+		$match_id = $this->input->post('trandau');
 		$this->db->where('match_id', $match_id);
 		$query = $this->db->get('match');
 		return $query->result_array();

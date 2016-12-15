@@ -177,7 +177,13 @@ class View extends CI_Controller {
     }
      
      public function guess($match_id = 1){
-        $this->load->model('guess_model');
+         $this->load->helper('form');
+         if($this->input->post('submit')){
+             $this->load->library('form_validation');
+             $data['trandau'] = $this->input->post('trandau');
+         }
+         $this->load->model('guess_model');
+
          $data['slider_articles'] = $this->articles_model->getListArticles(6, 0);
          $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
          $data['lastest_articles'] = $this->articles_model->getListArticles(4, 7);
@@ -190,23 +196,30 @@ class View extends CI_Controller {
      public function guess_result(){
         $doi1= "";
         $doi2= "";
+         $data['slider_articles'] = $this->articles_model->getListArticles(6, 0);
+         $data['popular_articles'] = $this->articles_model->getListArticles(4, 7);
          $this->load->helper('form');
             if($this->input->post('submit')){
             $this->load->library('form_validation');
-            $doi1 = $this->input->post('doi1');
-            $doi2= $this->input->post('doi2');
-            $ngay = $this->input->post('ngay');
-            $thang = $this->input->post('thang');
-            $nam = $this->input->post('nam');
-            $data['doi1'] = $doi1;
-            $data['doi2'] = $doi2;
-            $data['ngay'] = $ngay;
-            $data['thang'] = $thang;
-            $data['nam'] = $nam;
-        }
+            $data['match_id'] = $this->input->post('trandau');
+            }
+
+
         $this->load->model('guess_model');
         $this->load->model('ranking_model');
         $data['match'] = $this->guess_model->getListMatch();
+         $team = $this->guess_model->getMatchById();
+         $data['team'] = $team;
+         $info = $team[0];
+         $data['doi1'] = $info['team1'];
+         $data['doi2'] = $info['team2'];
+         $ngay = $info['date'];
+         $thang = $info['month'];
+         $nam = $info['year'];
+         $data['ngay'] = $info['date'];
+         $data['thang'] = $info['month'];
+         $data['nam'] = $info['year'];
+
         $data['history1'] = $this->guess_model->getHistoryDataHomeTeam($data['doi1'],$data['doi2']);
         $data['history2'] = $this->guess_model->getHistoryDataHomeTeam($data['doi2'],$data['doi1']);
         $data['date'] = $this->guess_model->getTime($data['doi1'],$data['doi2']);
@@ -216,7 +229,7 @@ class View extends CI_Controller {
             $year = $nam."_".$year;
             $data['year']= $year;
         } else{
-             $nam = substr($nam,2,2);
+            $nam = substr($nam,2,2);
             $year = intval($nam)-1;
             $year = $year."_".$nam;
             $data['year']= $year;
@@ -227,11 +240,8 @@ class View extends CI_Controller {
         $data['team2_recent'] = $this->guess_model->getRecent($data['doi2'],$data['year']);
         $data['team1_ranking'] = $this->ranking_model->getRankingDataByName($data['doi1'],$data['year']);
         $data['team2_ranking'] = $this->ranking_model->getRankingDataByName($data['doi2'],$data['year']);
-        $this->load->view('template/header.php', $data);
-        $this->load->view('template/slide_bar', $data);
-        $this->load->view('guess/guess_result', $data);
-        $this->load->view('template/side_bar', $data);
-        $this->load->view('template/footer.php', $data);
+
+         $this->load->view('frontend/guess/resultGuess',$data);
      }
      //Xay dung tap hoc du lieu
     public function testhome(){
