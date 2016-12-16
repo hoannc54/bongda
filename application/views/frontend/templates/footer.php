@@ -3,8 +3,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-3">
                 <div id="text-2" class="widget widget_text"><h2 class="widgettitle">About Us</h2>
-                    <div class="textwidget">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
+                    <div class="textwidget">Trang web bóng đá với mong muốn đem lại các thông tin hữu ích nhất cho bạn đọc.
                     </div>
                 </div>
             </div>
@@ -14,13 +13,12 @@
                     <div class="latest-posts">
                         <div class="media">
                             <div class="pull-left"><a href="index4efb.html?p=405"><img width="64" height="64"
-                                                                                       src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/39-64x64.jpg"
+                                                                                       src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $popular_news[8]->img;?>"
                                                                                        class="img-responsive wp-post-image"
                                                                                        alt="39"
                                                                                        sizes="(max-width: 64px) 100vw, 64px"/></a>
                             </div>
-                            <div class="media-body"><h3 class="entry-title"><a href="index4efb.html?p=405">Full
-                                        Highlights and Penalty Shootout.</a></h3>
+                            <div class="media-body"><h3 class="entry-title"><a href="<?php echo base_url('view/article/' . $popular_news[8]->alias); ?>"><?php echo $popular_news[8]->title; ?></a></h3>
                                 <div class="entry-meta small"><i class="fa fa-clock-o"></i> 12:27 pm <i
                                         class="fa fa-calendar"></i> 25 Nov 2013
                                 </div>
@@ -28,13 +26,12 @@
                         </div>
                         <div class="media">
                             <div class="pull-left"><a href="indexcb8c.html?p=318"><img width="64" height="64"
-                                                                                       src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/28-64x64.jpg"
+                                                                                       src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $popular_news[6]->img ?>"
                                                                                        class="img-responsive wp-post-image"
                                                                                        alt="28"
                                                                                        sizes="(max-width: 64px) 100vw, 64px"/></a>
                             </div>
-                            <div class="media-body"><h3 class="entry-title"><a href="indexcb8c.html?p=318">The Games And
-                                        Tips That Helped Turn Her Son Andy.</a></h3>
+                            <div class="media-body"><h3 class="entry-title"><a href="<?php echo base_url('view/article/' . $popular_news[6]->alias); ?>"><?php echo $popular_news[6]->title; ?></a></h3>
                                 <div class="entry-meta small"><i class="fa fa-clock-o"></i> 10:01 am <i
                                         class="fa fa-calendar"></i> 25 Nov 2013
                                 </div>
@@ -46,21 +43,21 @@
             <div class="col-sm-6 col-md-3">
                 <div id="tag_cloud-2" class="widget widget_tag_cloud"><h2 class="widgettitle">Tags</h2>
                     <div class="tagcloud">
-                        <a href='index8573.html?tag=barcelona' class='tag-link-11' title='4 topics'
+                        <a href='<?php echo base_url('view/article/' . $popular_news[5]->alias); ?>' class='tag-link-11' title='4 topics'
                                              style='font-size: 15.333333333333pt;'>
                             Barcelona
                         </a>
-                        <a href='index28fa.html?tag=baseball-2' class='tag-link-12' title='2 topics'
+                        <a href='<?php echo base_url('view/article/' . $popular_news[4]->alias); ?>' class='tag-link-12' title='2 topics'
                            style='font-size: 8pt;'>
                             Manchester United
                         </a>
-                        <a href='index1f1d.html?tag=racing-2' class='tag-link-37' title='3 topics'
+                        <a href='<?php echo base_url('view/article/' . $popular_news[0]->alias); ?>' class='tag-link-37' title='3 topics'
                            style='font-size: 12pt;'>Ngoại hạng Anh</a>
-                        <a href='indexe776.html?tag=rugby-2' class='tag-link-42' title='3 topics'
+                        <a href=<?php echo base_url('view/article/' . $popular_news[1]->alias); ?>' class='tag-link-42' title='3 topics'
                            style='font-size: 12pt;'>Việt Nam</a>
-                        <a href='index69ee.html?tag=sportson' class='tag-link-47' title='5 topics'
+                        <a href='<?php echo base_url('view/article/' . $popular_news[2]->alias); ?>' class='tag-link-47' title='5 topics'
                            style='font-size: 18pt;'>AFF Cup</a>
-                        <a href='index09a6.html?tag=world-cup' class='tag-link-54' title='3 topics'
+                        <a href='<?php echo base_url('view/article/' . $popular_news[3]->alias); ?>' class='tag-link-54' title='3 topics'
                            style='font-size: 12pt;'>World Cup</a></div>
                 </div>
             </div>

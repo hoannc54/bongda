@@ -44,7 +44,7 @@
                                         <a href="<?php echo base_url('view/article/' . $article->alias); ?>">
                                             <img width="64"
                                                  height="64"
-                                                 src="<?php echo base_url()?>"
+                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $article->img;?>"
                                                  class="img-responsive wp-post-image"
                                                  alt="30"
                                                  sizes="(max-width: 64px) 100vw, 64px"/>
@@ -71,50 +71,7 @@
                     Advertisement</h2>
                 <a href="#" target="_blank"><img src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/sidebar-ad.png"
                                                  class="img-responsive" alt=""></a></div>
-            <div id="gallery_widget-2" class="widget widget_gallery_widget"><h2 class="widgettitle">Gallery</h2>
-                <div class="row widget-gallery">
-                    <div class="col-xs-6"><a href="index6595.html?p=459">
-                            <div class="img-container"><img width="280" height="155"
-                                                            src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/01-280x155.jpg"
-                                                            class="img-responsive wp-post-image" alt="01"
-                                                            sizes="(max-width: 280px) 100vw, 280px"/><i
-                                    class="fa fa-picture-o"></i>
-                                <div class="overlay"><h3 class="entry-title">Biggest College Football Loss</h3>
-                                </div>
-                            </div>
-                        </a></div>
-                    <div class="col-xs-6"><a href="indexc79d.html?p=448">
-                            <div class="img-container"><img width="280" height="155"
-                                                            src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/42-280x155.jpg"
-                                                            class="img-responsive wp-post-image" alt="42"
-                                                            sizes="(max-width: 280px) 100vw, 280px"/><i
-                                    class="fa fa-picture-o"></i>
-                                <div class="overlay"><h3 class="entry-title">Deliver sucker-punch but still need a
-                                        striker</h3></div>
-                            </div>
-                        </a></div>
-                    <div class="col-xs-6"><a href="indexd89d.html?p=261">
-                            <div class="img-container"><img width="280" height="155"
-                                                            src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/16-280x155.jpg"
-                                                            class="img-responsive wp-post-image" alt="16"
-                                                            sizes="(max-width: 280px) 100vw, 280px"/><i
-                                    class="fa fa-picture-o"></i>
-                                <div class="overlay"><h3 class="entry-title">British And Irish Lions Legend Jeremy
-                                        Guscott On Their</h3></div>
-                            </div>
-                        </a></div>
-                    <div class="col-xs-6"><a href="index48fd.html?p=184">
-                            <div class="img-container"><img width="280" height="155"
-                                                            src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/04-280x155.jpg"
-                                                            class="img-responsive wp-post-image" alt="04"
-                                                            sizes="(max-width: 280px) 100vw, 280px"/><i
-                                    class="fa fa-picture-o"></i>
-                                <div class="overlay"><h3 class="entry-title">Jorge Sampaoli&#8217;s Chile Side Will
-                                        Entertain Fans If They Qualify</h3></div>
-                            </div>
-                        </a></div>
-                </div>
-            </div>
+
         </aside>
     </div>
 </div>

@@ -4,18 +4,18 @@
         <div class="item active">
             <div class="row">
                 <div class="col-sm-8 slider-primary">
-                    <div class="item-inner"><a href="index6595.html?p=459">
+                    <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
 
                             <div class="item-thumbnail">
-                                <img width="520" height="350"
+                               <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>"> <img width="520" height="350"
                                      src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
                                      class="img-responsive wp-post-image"
-                                     alt="01"/>
+                                     alt="01"/></a>
 
                             </div>
                         </a>
                         <div class="item-content">
-                            <a href="index6595.html?p=459">
+                            <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
                                 <h2 class="entry-title">
                                     <?php echo $slider_articles[$article_first_id]->title?>
                                 </h2></a>
@@ -29,16 +29,16 @@
                     <?php $article_first_id += 1?>
                     <?php for($i = $article_first_id; $i < $article_first_id + 2; $i++):?>
                         <div class="secondary-item">
-                            <div class="item-inner"><a href="index4efb.html?p=405">
+                            <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$i]->alias); ?>">
                                     <div class="item-thumbnail">
                                         <img width="300" height="150"
-                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
+                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$i]->img;?>"
                                              class="img-responsive wp-post-image"
                                              alt="39"/>
                                     </div>
                                 </a>
                                 <div class="item-content">
-                                    <a href="">
+                                    <a href="<?php echo base_url('view/article/' . $slider_articles[$i]->alias); ?>">
                                         <h3 class="entry-title">
                                             <?php echo $slider_articles[$i]->title?>
                                         </h3>
@@ -56,21 +56,21 @@
         <div class="item ">
             <div class="row">
                 <div class="col-sm-8 slider-primary">
-                    <div class="item-inner">
-                        <a href="index8a7d.html?p=301">
+                    <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
+
                             <div class="item-thumbnail">
-                                <img width="520" height="350"
-                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
-                                     class="img-responsive wp-post-image"
-                                     alt="23"/>
+                                <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>"> <img width="520" height="350"
+                                                                                                                                      src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
+                                                                                                                                      class="img-responsive wp-post-image"
+                                                                                                                                      alt="01"/></a>
+
                             </div>
                         </a>
                         <div class="item-content">
-                            <a href="index8a7d.html?p=301">
+                            <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
                                 <h2 class="entry-title">
-                                    <?php echo $slider_articles[$article_first_id]->title;?>
-                                </h2>
-                            </a>
+                                    <?php echo $slider_articles[$article_first_id]->title?>
+                                </h2></a>
                             <p class="entry-content">
                                 <?php echo $slider_articles[$article_first_id]->description?>
                             </p>
@@ -81,25 +81,27 @@
                     <?php $article_first_id += 1?>
                     <?php for($i = $article_first_id; $i < $article_first_id + 2; $i++):?>
                         <div class="secondary-item">
-                            <div class="item-inner"><a href="index4efb.html?p=405">
+                            <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$i]->alias); ?>">
                                     <div class="item-thumbnail">
                                         <img width="300" height="150"
-                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
+                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$i]->img;?>"
                                              class="img-responsive wp-post-image"
                                              alt="39"/>
                                     </div>
                                 </a>
                                 <div class="item-content">
-                                    <a href="">
+                                    <a href="<?php echo base_url('view/article/' . $slider_articles[$i]->alias); ?>">
                                         <h3 class="entry-title">
-                                            <?php echo $slider_articles[$i]->title; ?>
+                                            <?php echo $slider_articles[$i]->title?>
                                         </h3>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     <?php endfor;?>
-                </div>
+                    <?php $article_first_id += 2;?>
+
+                </div>c
             </div><!--/.row-->
         </div><!--/.item-->
     </div><!--/.carousel-inner-->
