@@ -55,4 +55,19 @@ class Tickets_Model extends CI_Model{
         $this->db->where('id', $id);
         return $this->db->delete('cart');
     }
+    public function countorder(){
+        return $this->db->count_all_results('orders');
+    }
+    public function getListOrder($limit = 10, $offset = 0){
+
+        $this->db->select('email,phone,address,productid,quantity,price,name');
+        $this->db->from('khachhang');
+        $this->db->join('orders', 'khachhang.id = orders.customerid');
+        $this->db->join('order_detail','orders.id= order_detail.orderid');
+        return $this->db->get()->result_array();
+    }
+    function delete_deal($id = ""){
+        $this->db->where('id', $id);
+        return $this->db->delete('order_detail');
+    }
 }

@@ -51,8 +51,7 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new article';
         $data['nav_admin'] = 'add_article';
-//        $this->load->view('backend/templates/header', $data);
-//        $this->load->view('backend/templates/leftside', $data);
+
         $this->load->view('backend/article/add', $data);
 //        $this->load->view('backend/templates/footer', $data);
     }
@@ -108,8 +107,7 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new video';
         $data['nav_admin'] = 'add_video';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
+
         $this->load->view('backend/videos/add', $data);
 //        $this->load->view('template/footer', $data);
     }
@@ -123,10 +121,7 @@ class Admin extends CI_Controller {
         
         $data['title'] = 'Articles Manager';
         $data['nav_admin'] = 'articles_manager';
-//        $this->load->view('template/header.php', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/articles_manager', $data);
-//        $this->load->view('template/footer.php', $data);
+
         $this->load->view('backend/article/list',$data);
     }
 
@@ -171,10 +166,9 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Edit Article';
         $data['nav_admin'] = 'articles_manager';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
+
         $this->load->view('backend/article/edit', $data);
-//        $this->load->view('template/footer', $data);
+
     }
 
     // xoá bài viết
@@ -213,10 +207,7 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Video Manager';
         $data['nav_admin'] = 'videos_manager';
-//        $this->load->view('template/header.php', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/videos_manager', $data);
-//        $this->load->view('template/footer.php', $data);
+
         $this->load->view('backend/videos/list',$data);
     }
     
@@ -244,10 +235,7 @@ class Admin extends CI_Controller {
         config_paginator('admin/users_manager',$mount,$per_page);
         $data['list_users'] = $this->users_model->getListUsers($per_page, ($page - 1) * $per_page);
         $data['nav_admin'] = 'users_manager';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/users_manager', $data);
-//        $this->load->view('template/footer', $data);
+
         $this->load->view('backend/users/list', $data);
     }
     public function edit_user($user_id = ""){
@@ -291,10 +279,7 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Edit Article';
         $data['nav_admin'] = 'users_manager';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/edit_user', $data);
-//        $this->load->view('template/footer', $data);
+
         $this->load->view('backend/users/edit', $data);
     }
     
@@ -322,10 +307,7 @@ class Admin extends CI_Controller {
 
         $data['list_tickets'] =  $this->tickets_model->getTicket($per_page, ($page - 1) * $per_page);
         $data['nav_admin'] = 'tickets_manager';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/tickets_manager', $data);
-//        $this->load->view('template/footer', $data);
+
         $this->load->view('backend/tickets/list',$data);
     }
     public function add_user(){
@@ -359,10 +341,7 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new member';
         $data['nav_admin'] = 'add_member';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/add_user', $data);
-//        $this->load->view('template/footer', $data);
+
         $this->load->view('backend/users/add', $data);
 
     }
@@ -399,10 +378,7 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Add a new Ticket';
         $data['nav_admin'] = 'add_ticket';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/add_ticket', $data);
-//        $this->load->view('template/footer', $data);
+
         $this->load->view('backend/tickets/add',$data);
 
     }
@@ -448,11 +424,143 @@ class Admin extends CI_Controller {
 
         $data['title'] = 'Edit Ticket';
         $data['nav_admin'] = 'tickets_manager';
-//        $this->load->view('template/header', $data);
-//        $this->load->view('template/nav_bar_admin', $data);
-//        $this->load->view('admin/edit_ticket', $data);
-//        $this->load->view('template/footer', $data);
+
         $this->load->view('backend/tickets/edit',$data);
     }
-    
+    public function add_match(){
+        $this->load->helper('form');
+        if ($this->input->post()) {
+            $this->load->library('form_validation');
+            $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+
+            // các luật
+            $this->form_validation->set_rules('match_name', 'Ten ve', 'trim|required');
+            $this->form_validation->set_rules('date', 'Ngày diễn ra trận thi đấu', 'trim|required');
+            $this->form_validation->set_rules('month', 'Tháng diễn ra trận đấu', 'trim|required');
+            $this->form_validation->set_rules('year',"Năm: ", 'trim|required');
+            $this->form_validation->set_rules('team1', 'Đội 1:', 'trim|required');
+            $this->form_validation->set_rules('team2',"Đội 2:",'trim|required');
+            $this->form_validation->set_rules('description',"Mô tả trận đấu",'trim|required');
+
+            // kiểm tra các luật
+            if ($this->form_validation->run() === true) {
+                // Thông báo thành công
+                $this->load->model('matchs_model');
+                if ($this->matchs_model->addMatch() == true) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-success">Thêm trận đấu thành công!</div>');
+                } else {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+                }
+                redirect(current_url());
+            }
+        }
+
+        // lấy dữ liệu cho dropdown
+//        $this->load->model('matchs_model');
+//        $data['dropdownlist'] = $this->matchs_model->getMatch();
+
+        $data['title'] = 'Add a new Match';
+        $data['nav_admin'] = 'add_match';
+
+        $this->load->view('backend/match/add',$data);
+    }
+    public function edit_match($id = ""){
+        $this->load->model('matchs_model');
+        $this->load->helper('form');
+        if ($this->input->post()) {
+
+            $this->load->library('form_validation');
+            $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+
+            // các luật
+            $this->form_validation->set_rules('match_name', 'Tên trận đấu', 'trim|required');
+            $this->form_validation->set_rules('date', 'Ngày:', 'trim|required');
+            $this->form_validation->set_rules('month', 'Tháng:', 'trim|required');
+            $this->form_validation->set_rules('year', 'Năm:', 'trim|required');
+            $this->form_validation->set_rules('team1','Đội 1:','trim|required');
+            $this->form_validation->set_rules('team2','Doi 2:','trim|required');
+            $this->form_validation->set_rules('description','Mô tả:','trim|required');
+
+            // kiểm tra các luật
+
+            if ($this->form_validation->run() === true) {
+                // Thông báo thành công
+
+                $this->load->model('matchs_model');
+                if ($this->matchs_model->updateMatch($id) == true) {
+
+                    $this->session->set_flashdata('message', '<div class="alert alert-success">Sửa vé thành công!</div>');
+                } else {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+                }
+                redirect('admin/matchs_manager');
+            }
+        }
+
+        // lấy dữ liệu cho form
+        $this->load->model('matchs_model');
+        $data['match'] = $this->matchs_model->getMatch($id);
+        $data['id'] = $id;
+//        // lấy dữ liệu cho dropdown
+//        $this->load->model('matchs_model');
+//        $data['dropdownlist'] = $this->matchs_model->getTicket();
+
+        $data['title'] = 'Edit Match';
+        $data['nav_admin'] = 'match_manager';
+
+        $this->load->view('backend/match/edit',$data);
+
+    }
+    public function delete_match($id) {
+        if (!isset($id) || empty($id)) {
+            redirect('admin/matchs_manager');
+        }
+        $this->load->model('matchs_model');
+        if ($this->matchs_model->delete_match($id) == true) {
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success">Đã xoá trận đấu thành công!</div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+        }
+        redirect('admin/matchs_manager');
+    }
+    public function matchs_manager($page = 1){
+        $per_page = 10;      // số bài viết trên một trang
+        $this->load->model('matchs_model');
+        $mount = $this->matchs_model->countMatch();
+        // cấu hình phân trang
+        config_paginator('view/all_matchs', $mount, $per_page);
+        $data['list_match'] = $this->matchs_model->getListMatchs($per_page, ($page - 1) * $per_page);
+
+        $data['title'] = 'Match Manager';
+        $data['nav_admin'] = 'videos_manager';
+
+        $this->load->view('backend/match/list',$data);
+    }
+    public function deal_manager($page = 1){
+        $per_page = 10;      // số bài viết trên một trang
+        $this->load->model('tickets_model');
+        $mount = $this->tickets_model->countorder();
+        // cấu hình phân trang
+        config_paginator('view/all_orders', $mount, $per_page);
+        $data['list_order'] = $this->tickets_model->getListOrder($per_page, ($page - 1) * $per_page);
+
+        $data['title'] = 'Orders Manager';
+        $data['nav_admin'] = 'orders_manager';
+
+        $this->load->view('backend/tickets/deal',$data);
+    }
+    public function delete_deal($id) {
+        if (!isset($id) || empty($id)) {
+            redirect('admin/deal_manager');
+        }
+        $this->load->model('tickets_model');
+        if ($this->tickets_model->delete_deal($id) == true) {
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success">Đã xoá hóa đơn thành công!</div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+        }
+        redirect('admin/deal_manager');
+    }
 }

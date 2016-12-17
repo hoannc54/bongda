@@ -6,7 +6,7 @@ class Shopping extends CI_Controller {
         parent::__construct();
         $this->load->view('frontend/templates/head');
         $this->load->view('frontend/templates/header');
-        
+        $this->load->model('articles_model');
         $this->load->library('cart');
         $this->load->model('shopping_model');
         $this->load->helper('form');
@@ -36,6 +36,7 @@ class Shopping extends CI_Controller {
 // End pagination                      
        
          $ndata = array(
+             'popular_news' => $this->articles_model->getListArticles(16,0),
             'paginator'     =>$paginator,
             'post'          =>$query_poster,
             'title'          => "Trang bóng đá trực tuyến",
@@ -44,7 +45,7 @@ class Shopping extends CI_Controller {
             );     
               
         $this->load->view('tickets/tem-shopping',$ndata);          
-         $this->load->view('frontend/templates/footer'); 
+         $this->load->view('frontend/templates/footer',$ndata);
         }
 
     function add()
@@ -110,12 +111,13 @@ class Shopping extends CI_Controller {
     function billing_view()
         {
              $ndata = array(
+                 'popular_news' => $this->articles_model->getListArticles(16,0),
                 'title'          => "Trang bóng đá trực tuyến",
                 'keywords'       => "Bóng đá, trực tuyến",
                 'description'    => "Kênh bóng đá trực tuyến hiện nay còn đang chưa được phát triển, người hâm mộ chưa được tiếp xúc với giả đấu 1 cách dễ dàng"
                 );         
             $this->load->view('tickets/tem-thanhtoan',$ndata);
-            $this->load->view('frontend/templates/footer');
+            $this->load->view('frontend/templates/footer',$ndata);
         }
 
     function save_order()
@@ -123,6 +125,7 @@ class Shopping extends CI_Controller {
             $this->load->helper('form');
        
             $customer = array(
+
                 'name'          => $this->input->post('name'),
                 'email'         => $this->input->post('email'),
                 'phone'         => $this->input->post('phone'),
@@ -136,9 +139,10 @@ class Shopping extends CI_Controller {
                 'date' => date('Y-m-d'),
                 'customerid' => $cust_id
             );
-            
+
             $ord_id = $this->shopping_model->insert_order($order);
-            
+            $popular_news = $this->articles_model->getListArticles(16,0);
+            $data['popular_news'] = $popular_news;
             if ($cart = $this->cart->contents()):
                 foreach ($cart as $item):
                     $order_detail = array(
@@ -151,7 +155,7 @@ class Shopping extends CI_Controller {
                 endforeach;
             endif;
             $this->load->view('tickets/tem-success');
-            $this->load->view('frontend/templates/footer');
+            $this->load->view('frontend/templates/footer',$data);
         }       
 } 
 ?>
