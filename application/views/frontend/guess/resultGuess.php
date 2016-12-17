@@ -99,6 +99,61 @@
 
 
                 ?>
+
+                <div id="post-322" class="post-322 results type-results status-publish has-post-thumbnail hentry result_cat-uefa-champions-league">
+
+                    <div class="result-item">
+                        <div class="result-info clearfix">
+                            <p class="pull-left match-date">07 Dec 2014</p>
+                            <p class="pull-right league-name">UEFA Champions League</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="media">
+                                    <div class="pull-left">
+                                        <img src="<?php echo base_url()?>assets/frontend/wp-content/uploads/2013/11/011.png"" alt="Liverpool">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Liverpool</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 score">
+                                3 - 1					</div>
+
+                            <div class="col-xs-4">
+                                <div class="media">
+                                    <div class="pull-right">
+                                        <img src="<?php echo base_url()?>assets/frontend/wp-content/uploads/2013/11/011.png"" alt="Liverpool">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="pull-right">Roma</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="result-details">
+
+                            <ul class="timeline">
+                                <li class="team1 goal">
+                                    <span class="time">33</span><span class="player-name">Gerrard</span>
+                                </li>
+                                <li class="team2 goal">
+                                    <span class="time">37</span><span class="player-name">Totti</span>
+                                </li>
+                                <li class="team2 red"><span class="time">45</span><span class="player-name">Totti</span></li>
+                                <li class="team1 goal"><span class="time">75</span><span class="player-name">Suarez</span></li>
+                                <li class="team1 goal"><span class="time">89</span><span class="player-name">Tore</span></li>
+                                <li class="team1 yellow"><span class="time">90</span><span class="player-name">K. Tore</span></li>
+                            </ul><!--/.timeline-->
+
+                        </div><!--/#result-details-->
+
+                    </div>
+                </div><!--/#post-->
                 <br>
                 <footer>
 
