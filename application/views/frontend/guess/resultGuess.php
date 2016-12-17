@@ -96,11 +96,9 @@
                 echo "<br>";
                 echo "<h4>So về Vị trí trên bảng xếp hạng: Tỷ lệ thắng trên sân nhà của đội chủ nhà là:</h4>".$x3;
                 echo "<br>";
-
-
                 ?>
 
-                <div id="post-322" class="post-322 results type-results status-publish has-post-thumbnail hentry result_cat-uefa-champions-league">
+                <div class="results type-results status-publish has-post-thumbnail">
 
                     <div class="result-item">
                         <div class="result-info clearfix">
@@ -121,7 +119,10 @@
                             </div>
 
                             <div class="col-xs-4 score">
-                                3 - 1					</div>
+                                <span class="label label-info">40%</span>
+                                -
+                                <span class="label label-success">50%</span>
+                            </div>
 
                             <div class="col-xs-4">
                                 <div class="media">
@@ -135,22 +136,44 @@
                             </div>
                         </div>
 
-                        <div class="result-details">
+                        <div class="">
+                            <div class="row" style="padding: 20px 0">
+                                <div class="col-xs-4">
+                                    <span class="label label-info text-left">50%</span>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <span class="label label-warning">Lịch sử thi đấu</span>
+                                </div>
+                                <div class="col-xs-4 text-right">
+                                    <span class="label label-success pull-right">40%</span>
+                                </div>
+                            </div>
+                            <div class="row" style="padding: 20px 0">
+                                <div class="col-xs-4">
+                                    <span class="label label-info text-left">50%</span>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <span class="label label-warning">Phong độ</span>
+                                </div>
+                                <div class="col-xs-4 text-right">
+                                    <span class="label label-success pull-right">40%</span>
+                                </div>
+                            </div>
+                            <div class="row" style="padding: 20px 0">
+                                <div class="col-xs-4">
+                                    <span class="label label-info text-left">50%</span>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <span class="label label-warning">Bảng xếp hạng</span>
+                                </div>
+                                <div class="col-xs-4 text-right">
+                                    <span class="label label-success pull-right">40%</span>
+                                </div>
 
-                            <ul class="timeline">
-                                <li class="team1 goal">
-                                    <span class="time">33</span><span class="player-name">Gerrard</span>
-                                </li>
-                                <li class="team2 goal">
-                                    <span class="time">37</span><span class="player-name">Totti</span>
-                                </li>
-                                <li class="team2 red"><span class="time">45</span><span class="player-name">Totti</span></li>
-                                <li class="team1 goal"><span class="time">75</span><span class="player-name">Suarez</span></li>
-                                <li class="team1 goal"><span class="time">89</span><span class="player-name">Tore</span></li>
-                                <li class="team1 yellow"><span class="time">90</span><span class="player-name">K. Tore</span></li>
-                            </ul><!--/.timeline-->
+                            </div>
 
-                        </div><!--/#result-details-->
+
+                        </div>
 
                     </div>
                 </div><!--/#post-->
