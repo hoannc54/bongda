@@ -109,7 +109,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="media">
-                                    <div class="pull-left">
+                                    <div class="pull-left hidden">
                                         <img src="<?php echo base_url()?>assets/frontend/wp-content/uploads/2013/11/011.png"" alt="Liverpool">
                                     </div>
                                     <div class="media-body">
@@ -126,7 +126,7 @@
 
                             <div class="col-xs-4">
                                 <div class="media">
-                                    <div class="pull-right">
+                                    <div class="pull-right hidden">
                                         <img src="<?php echo base_url()?>assets/frontend/wp-content/uploads/2013/11/011.png"" alt="Liverpool">
                                     </div>
                                     <div class="media-body">
