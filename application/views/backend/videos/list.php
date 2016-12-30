@@ -1,7 +1,14 @@
 <?php $this->load->view('backend/templates/header')?>
     <!-- Left side column. contains the logo and sidebar -->
-<?php $this->load->view('backend/templates/leftside')?>
-
+<?php if(check_admin()):?>
+    <?php $this->load->view('backend/templates/leftside')?>
+<?php endif;?>
+<?php if(check_TicketManager()):?>
+    <?php $this->load->view('backend/templates/leftside2')?>
+<?php endif;?>
+<?php if(check_ArticleManager()):?>
+    <?php $this->load->view('backend/templates/leftside3')?>
+<?php endif;?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -19,8 +26,8 @@
                         <div class="box-header">
                             <h3 class="box-title">Quản lý Video </h3>
                             <div class="box-tools" style="margin-right: 40px;">
-                                <a href="<?php echo base_url('admin/add_user')?>" class="btn btn-sm btn-success">
-                                    <i class="fa fa-fw fa-user-plus"></i> Tạo bài viết
+                                <a href="<?php echo base_url('admin/add_video')?>" class="btn btn-sm btn-success">
+                                    <i class="fa fa-fw fa-user-plus"></i> Thêm video
                                 </a>
                             </div>
                         </div><!-- /.box-header -->

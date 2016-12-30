@@ -45,11 +45,11 @@
                 </button>
             </div><!--/.navbar-header-->
 
-            <form class="navbar-form navbar-right" role="search" method="get" id="searchform"
-                  action="http://demo.themeum.com/wordpress/sportsline/">
-                <input type="text" value="" name="s" id="s" class="form-control" placeholder="Search"/>
-                <i class="fa fa-search"></i>
-            </form>
+<!--            <form class="navbar-form navbar-right" role="search" method="get" id="searchform"-->
+<!--                  action="http://demo.themeum.com/wordpress/sportsline/">-->
+<!--                <input type="text" value="" name="s" id="s" class="form-control" placeholder="Search"/>-->
+<!--                <i class="fa fa-search"></i>-->
+<!--            </form>-->
             <div class="collapse navbar-collapse">
                 <ul id="menu-main-menu" class="nav navbar-nav">
                     <li id="menu-item-1280"
@@ -81,6 +81,16 @@
                     <?php if(check_admin()):?>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
                             <a href="<?php echo base_url();?>admin/articles_manager">Quản lý</a>
+                        </li>
+                    <?php endif;?>
+                    <?php if(check_ArticleManager()):?>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="<?php echo base_url();?>articlemanager/articles_manager">Quản lý bài viết</a>
+                        </li>
+                    <?php endif;?>
+                    <?php if(check_TicketManager()):?>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a href="<?php echo base_url();?>ticketmanager/tickets_manager">Quản lý Vé</a>
                         </li>
                     <?php endif;?>
                 </ul>

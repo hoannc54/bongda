@@ -1,6 +1,14 @@
 <?php $this->load->view('backend/templates/header')?>
     <!-- Left side column. contains the logo and sidebar -->
-<?php $this->load->view('backend/templates/leftside')?>
+<?php if(check_admin()):?>
+    <?php $this->load->view('backend/templates/leftside')?>
+<?php endif;?>
+<?php if(check_TicketManager()):?>
+    <?php $this->load->view('backend/templates/leftside2')?>
+<?php endif;?>
+<?php if(check_ArticleManager()):?>
+    <?php $this->load->view('backend/templates/leftside3')?>
+<?php endif;?>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">

@@ -228,6 +228,7 @@ class View extends CI_Controller {
         $data['team1_recent'] = $this->guess_model->getRecent($data['doi1'],$data['year']);
         $data['team2_recent'] = $this->guess_model->getRecent($data['doi2'],$data['year']);
         $data['team1_ranking'] = $this->ranking_model->getRankingDataByName($data['doi1'],$data['year']);
+
         $data['team2_ranking'] = $this->ranking_model->getRankingDataByName($data['doi2'],$data['year']);
 
          $this->load->view('frontend/guess/resultGuess',$data);

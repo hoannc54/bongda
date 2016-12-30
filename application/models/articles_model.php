@@ -8,12 +8,13 @@ class Articles_Model extends CI_Model {
 
     // thêm bài viết mới
     // input: user_id, categoty_id, title, desctiption, content ; output: true | false
-    public function addArticle() {
+    public function addArticle($img = " ") {
         $title = htmlentities($this->input->post('title'));
         $data = array(
             'user_id' => $this->session->userdata('user_id'),
             'category_id' => $this->input->post('category'),
             'title' => $title,
+            'img'=>'anh1.jpg',
             'description' => htmlentities($this->input->post('description')),
             'content' => $this->input->post('content'),
             'alias' => url_title($title, '-', true).uniqid(rand(), true),

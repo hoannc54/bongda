@@ -1,6 +1,14 @@
 <?php $this->load->view('backend/templates/header')?>
     <!-- Left side column. contains the logo and sidebar -->
-<?php $this->load->view('backend/templates/leftside')?>
+<?php if(check_admin()):?>
+    <?php $this->load->view('backend/templates/leftside')?>
+<?php endif;?>
+<?php if(check_TicketManager()):?>
+    <?php $this->load->view('backend/templates/leftside2')?>
+<?php endif;?>
+<?php if(check_ArticleManager()):?>
+    <?php $this->load->view('backend/templates/leftside3')?>
+<?php endif;?>
   <script src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
     <script src="<?php echo base_url(); ?>assets/ckfinder/ckfinder.js"></script>
     <!-- Content Wrapper. Contains page content -->
@@ -37,6 +45,10 @@
                                     <label for="title">Tiêu đề</label>
                                     <input type="text" class="form-control" id="title" placeholder="Username"
                                            name="title" value="<?php echo set_value('title');?>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Image</label>
+                                    <input type="file" accept="images/*" name="img" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Phân loại</label>

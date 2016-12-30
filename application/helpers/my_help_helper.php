@@ -19,7 +19,7 @@ if ( ! function_exists('check_admin'))
     {
         $CI =& get_instance();
         $user_level = $CI->session->userdata('user_level');
-        if ($user_level != null && $user_level > 0) {
+        if ($user_level != null && $user_level == 1) {
             return true;
         } else {
             return false;
@@ -32,14 +32,26 @@ if ( ! function_exists('check_TicketManager'))
     {
         $CI =& get_instance();
         $user_level = $CI->session->userdata('user_level');
-        if ($user_level != null && $user_level == 1) {
+        if ($user_level != null && $user_level == 2) {
             return true;
         } else {
             return false;
         }
     }
 }
-
+if ( ! function_exists('check_ArticleManager'))
+{
+    function check_ArticleManager()
+    {
+        $CI =& get_instance();
+        $user_level = $CI->session->userdata('user_level');
+        if ($user_level != null && $user_level == 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 if ( ! function_exists('config_paginator') )
 {
     function config_paginator($uri = '', $total_rows = 10, $per_page = 5)

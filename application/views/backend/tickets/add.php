@@ -1,7 +1,14 @@
 <?php $this->load->view('backend/templates/header')?>
     <!-- Left side column. contains the logo and sidebar -->
-<?php $this->load->view('backend/templates/leftside')?>
-
+<?php if(check_admin()):?>
+    <?php $this->load->view('backend/templates/leftside')?>
+<?php endif;?>
+<?php if(check_TicketManager()):?>
+    <?php $this->load->view('backend/templates/leftside2')?>
+<?php endif;?>
+<?php if(check_ArticleManager()):?>
+    <?php $this->load->view('backend/templates/leftside3')?>
+<?php endif;?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -55,7 +62,7 @@
                                     <input type="text" name="contents" class="form-control" value="<?php if(isset($ticket['contents'])) echo $ticket['contents'];?>" >
                                 </div>
                                 <div class="form-group">
-                                    <label>Title: </label>
+                                    <label>Price: </label>
                                     <input type="text" name="price" class="form-control" value="<?php if(isset($ticket['price'])) echo $ticket['price'];?>" >
                                 </div>
                             </div><!-- /.box-body -->
