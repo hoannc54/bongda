@@ -118,4 +118,20 @@ th, td{
   text-align: left;
   padding: 10px 5px;
 }
+#ss{
+  margin: 30px auto;
+  padding-top: 50px;
+  background-color: white;
+  width: 500px;
+  text-align: center;
+  height: 350px;
+}
+#ss h1{
+  padding: 10px 10px;
+  font-size: 18px;
+}
+#ss a{
+  color: blue;
+  text-decoration: none;
+}
  

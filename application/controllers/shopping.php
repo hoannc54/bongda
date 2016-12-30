@@ -4,7 +4,6 @@ class Shopping extends CI_Controller {
     {
         
         parent::__construct();
-        $this->load->view('frontend/templates/head');
         $this->load->view('frontend/templates/header');
         $this->load->model('articles_model');
         $this->load->library('cart');
@@ -44,8 +43,8 @@ class Shopping extends CI_Controller {
             'description'    => "Kênh bóng đá trực tuyến hiện nay còn đang chưa được phát triển, người hâm mộ chưa được tiếp xúc với giả đấu 1 cách dễ dàng"
             );     
               
-        $this->load->view('tickets/tem-shopping',$ndata);          
-         $this->load->view('frontend/templates/footer',$ndata);
+        $this->load->view('frontend/tickets/tem-shopping',$ndata);
+         
         }
 
     function add()
@@ -116,8 +115,7 @@ class Shopping extends CI_Controller {
                 'keywords'       => "Bóng đá, trực tuyến",
                 'description'    => "Kênh bóng đá trực tuyến hiện nay còn đang chưa được phát triển, người hâm mộ chưa được tiếp xúc với giả đấu 1 cách dễ dàng"
                 );         
-            $this->load->view('tickets/tem-thanhtoan',$ndata);
-            $this->load->view('frontend/templates/footer',$ndata);
+            $this->load->view('frontend/tickets/tem-thanhtoan',$ndata);
         }
 
     function save_order()
@@ -154,8 +152,8 @@ class Shopping extends CI_Controller {
                 $cust_id = $this->shopping_model->insert_order_detail($order_detail);
                 endforeach;
             endif;
-            $this->load->view('tickets/tem-success');
-            $this->load->view('frontend/templates/footer',$data);
+            $this->load->view('frontend/tickets/tem-success', $data);
+            
         }       
 } 
 ?>

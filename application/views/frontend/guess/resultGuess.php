@@ -137,7 +137,7 @@
                         </div>
 
                         <div class="">
-                            <div class="row" style="padding: 20px 0">
+                            <div class="row" style="padding-top: 20px">
                                 <div class="col-xs-4">
                                     <span class="label label-info text-left">50%</span>
                                 </div>
@@ -148,7 +148,7 @@
                                     <span class="label label-success pull-right">40%</span>
                                 </div>
                             </div>
-                            <div class="row" style="padding: 20px 0">
+                            <div class="row" style="padding-top: 20px">
                                 <div class="col-xs-4">
                                     <span class="label label-info text-left">50%</span>
                                 </div>
@@ -159,7 +159,7 @@
                                     <span class="label label-success pull-right">40%</span>
                                 </div>
                             </div>
-                            <div class="row" style="padding: 20px 0">
+                            <div class="row" style="padding-top: 20px">
                                 <div class="col-xs-4">
                                     <span class="label label-info text-left">50%</span>
                                 </div>

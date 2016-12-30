@@ -46,32 +46,32 @@
             </div><!--/.navbar-header-->
 
             <form class="navbar-form navbar-right" role="search" method="get" id="searchform"
-                  action="http://demo.themeum.com/wordpress/sportsline/">
+                  action="">
                 <input type="text" value="" name="s" id="s" class="form-control" placeholder="Search"/>
                 <i class="fa fa-search"></i>
             </form>
             <div class="collapse navbar-collapse">
                 <ul id="menu-main-menu" class="nav navbar-nav">
-                    <li id="menu-item-1280"
+                    <li id="menu-item-1"
                         class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-26 current_page_item">
                         <a href="<?php echo base_url()?>">Trang chủ</a>
                     </li>
-                    <li id="menu-item-1308" class=" menu-item menu-item-type-post_type menu-item-object-page">
+                    <li id="menu-item-2" class=" menu-item menu-item-type-post_type menu-item-object-page">
                         <a href="<?php echo base_url('view/all_videos'); ?>">
                             Video
                         </a>
                     </li>
-                    <li id="menu-item-1308" class=" menu-item menu-item-type-post_type menu-item-object-page">
+                    <li id="menu-item-3" class=" menu-item menu-item-type-post_type menu-item-object-page">
                         <a href="<?php echo base_url('view/ranking'); ?>">
                             Bảng xếp hạng
                         </a>
                     </li>
-                    <li id="menu-item-1308" class=" menu-item menu-item-type-post_type menu-item-object-page">
+                    <li id="menu-item-4" class=" menu-item menu-item-type-post_type menu-item-object-page">
                         <a href="<?php echo base_url('view/guess'); ?>">
                             Dự đoán
                         </a>
                     </li>
-                    <li id="menu-item-1362"
+                    <li id="menu-item-5"
                         class=" menu-item menu-item-type-post_type menu-item-object-page">
                         <a href="<?php echo base_url();?>shopping">
                             Đặt vé
@@ -79,7 +79,7 @@
                     </li>
 
                     <?php if(check_admin()):?>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                        <li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page">
                             <a href="<?php echo base_url();?>admin/articles_manager">Quản lý</a>
                         </li>
                     <?php endif;?>
