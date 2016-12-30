@@ -2,9 +2,6 @@
     <section id="main-body-wrapper" class="container">
         <div class="row" id="main-body">
             <div id="content" class="site-content col-md-8" role="main">
-                
-
-
                     <div class="row">
                         <div class="col-md-4">
                             <div class="list-group">
@@ -24,9 +21,6 @@
 
                                     } ?>
                                 </select>
-
-
-
                                 <input type="submit" name="submit" value="Go"/>
                             </form>
                             </div>
