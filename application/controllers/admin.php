@@ -40,26 +40,35 @@ class Admin extends CI_Controller {
             if ($this->form_validation->run() === true) {
                 // Thông báo thành công
                 $this->load->model('articles_model');
-                $upload_dir = './asserts/images';
+                $upload_dir = './uploads/images';
                 if (is_dir($upload_dir) && is_writable($upload_dir)) {  // kiểm tra thư mục
+//                    echo 'dung';
                     // xử lý tên file
-                    $name = explode('.', $_FILES['image']['name']);     // tách tên theo ký tự dot
-                    $ext = strtolower(end($name));                      // lấy phần mở rộng trong tên
-                   // array_pop($name);                                   // bỏ phần đuôi trong tên
-                   // $name = implode("_", $name);                        // gộp lại các phần của tên bằng dấu underscore
-                    $name = url_title($name, '_', true);                // chuẩn hoá tên
+//                    $name = explode('.', $_FILES['img']['name']);// tách tên theo ký tự dot
+//                    var_dump($name);
+//
+//                    $ext = strtolower(end($name));                      // lấy phần mở rộng trong tên
+//                    echo $name;
+//                    echo $ext;
+//                    var_dump($_FILES['img']);
+//                    die();
+//                   // array_pop($name);                                   // bỏ phần đuôi trong tên
+//                   // $name = implode("_", $name);                        // gộp lại các phần của tên bằng dấu underscore
+//                    $name = url_title($name, '_', true);                // chuẩn hoá tên
                     // chuyển file về thư mục $assert_dir
-                    $image_file = $upload_dir . $name . '.' . $ext;
-                    move_uploaded_file($_FILES['image']['tmp_name'], $image_file);
+                    $image_file = $upload_dir. '/' . $_FILES['img']['name'];
+                    move_uploaded_file($_FILES['img']['tmp_name'], $image_file);
                     $this->load->model('videos_model');
                     $img = substr($image_file, 2);                 // loại bỏ 2 ký tự đầu tiên './'
-                    $this->videos_model->addArticle($img);
+//                    $this->videos_model->addArticle($img);
+                }else{
+                    echo 'sai';
                 }
                     if ($this->articles_model->addArticle($img) == true) {
                     $this->session->set_flashdata('message', '<div class="alert alert-success">Thêm bài viết mới thành công!</div>');
-                } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
-                }
+                    } else {
+                        $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
+                    }
                 redirect(current_url());
             }
         }
@@ -72,7 +81,6 @@ class Admin extends CI_Controller {
         $data['nav_admin'] = 'add_article';
 
         $this->load->view('backend/article/add', $data);
-//        $this->load->view('backend/templates/footer', $data);
     }
 
     // thêm video mới

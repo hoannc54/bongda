@@ -4,11 +4,12 @@
         <div class="item active">
             <div class="row">
                 <div class="col-sm-8 slider-primary">
-                    <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
+                    <div class="item-inner">
+                        <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
 
                             <div class="item-thumbnail">
                                <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>"> <img width="520" height="350"
-                                     src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
+                                     src="<?php echo base_url();?><?php echo $slider_articles[$article_first_id]->img;?>"
                                      class="img-responsive wp-post-image"
                                      alt="01"/></a>
 
@@ -32,7 +33,7 @@
                             <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$i]->alias); ?>">
                                     <div class="item-thumbnail">
                                         <img width="300" height="150"
-                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$i]->img;?>"
+                                             src="<?php echo base_url();?><?php echo $slider_articles[$i]->img;?>"
                                              class="img-responsive wp-post-image"
                                              alt="39"/>
                                     </div>
@@ -59,11 +60,12 @@
                     <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
 
                             <div class="item-thumbnail">
-                                <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>"> <img width="520" height="350"
-                                                                                                                                      src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$article_first_id]->img;?>"
-                                                                                                                                      class="img-responsive wp-post-image"
-                                                                                                                                      alt="01"/></a>
-
+                                <a href="<?php echo base_url('view/article/' . $slider_articles[$article_first_id]->alias); ?>">
+                                    <img width="520" height="350"
+                                      src="<?php echo base_url();?><?php echo $slider_articles[$article_first_id]->img;?>"
+                                      class="img-responsive wp-post-image"
+                                      alt="01"/>
+                                </a>
                             </div>
                         </a>
                         <div class="item-content">
@@ -84,7 +86,7 @@
                             <div class="item-inner"><a href="<?php echo base_url('view/article/' . $slider_articles[$i]->alias); ?>">
                                     <div class="item-thumbnail">
                                         <img width="300" height="150"
-                                             src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $slider_articles[$i]->img;?>"
+                                             src="<?php echo base_url();?><?php echo $slider_articles[$i]->img;?>"
                                              class="img-responsive wp-post-image"
                                              alt="39"/>
                                     </div>
@@ -101,7 +103,7 @@
                     <?php endfor;?>
                     <?php $article_first_id += 2;?>
 
-                </div>c
+                </div>
             </div><!--/.row-->
         </div><!--/.item-->
     </div><!--/.carousel-inner-->

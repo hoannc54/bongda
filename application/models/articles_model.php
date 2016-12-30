@@ -14,7 +14,7 @@ class Articles_Model extends CI_Model {
             'user_id' => $this->session->userdata('user_id'),
             'category_id' => $this->input->post('category'),
             'title' => $title,
-            'img'=>'anh1.jpg',
+            'img'=>$img,
             'description' => htmlentities($this->input->post('description')),
             'content' => $this->input->post('content'),
             'alias' => url_title($title, '-', true).uniqid(rand(), true),
@@ -94,7 +94,7 @@ class Articles_Model extends CI_Model {
     }
 
     public function getArticleCategory($id){
-        $this->db->select('title, description, alias, post_on');
+        $this->db->select('title, description, img, alias, post_on');
         $this->db->where('category_id', $id);
         $this->db->order_by("article_id", "desc");
         $query = $this->db->get('articles');

@@ -15,7 +15,7 @@
                                         <a href="<?php echo base_url('view/article/' . $article->alias); ?>">
                                             <img width="64"
                                                  height="64"
-                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $article->img;?>"
+                                                 src="<?php echo base_url();?><?php echo $article->img;?>"
                                                  class="img-responsive wp-post-image"
                                                  alt="30"
                                                  sizes="(max-width: 64px) 100vw, 64px"/>
@@ -44,7 +44,7 @@
                                         <a href="<?php echo base_url('view/article/' . $article->alias); ?>">
                                             <img width="64"
                                                  height="64"
-                                                 src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $article->img;?>"
+                                                 src="<?php echo base_url();?><?php echo $article->img;?>"
                                                  class="img-responsive wp-post-image"
                                                  alt="30"
                                                  sizes="(max-width: 64px) 100vw, 64px"/>
@@ -69,7 +69,8 @@
             </div>
             <div id="image_widget-4" class="widget widget_image_widget"><h2 class="widgettitle">
                     Advertisement</h2>
-                <a href="#" target="_blank"><img src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/sidebar-ad.png"
+                <a href="#" target="_blank">
+                    <img src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/sidebar-ad.png"
                                                  class="img-responsive" alt=""></a></div>
 
         </aside>

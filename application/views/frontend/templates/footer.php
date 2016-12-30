@@ -12,28 +12,45 @@
                         Bài viết mới</h2>
                     <div class="latest-posts">
                         <div class="media">
-                            <div class="pull-left"><a href="index4efb.html?p=405"><img width="64" height="64"
-                                                                                       src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $popular_news[8]->img;?>"
-                                                                                       class="img-responsive wp-post-image"
-                                                                                       alt="39"
-                                                                                       sizes="(max-width: 64px) 100vw, 64px"/></a>
+                            <div class="pull-left">
+                                <a href="<?php echo base_url('view/article/' . $popular_news[8]->alias); ?>">
+                                    <img width="64" height="64"
+                                       src="<?php echo base_url();?><?php echo $popular_news[8]->img;?>"
+                                       class="img-responsive wp-post-image"
+                                       alt="39"
+                                       sizes="(max-width: 64px) 100vw, 64px"/>
+                                </a>
                             </div>
-                            <div class="media-body"><h3 class="entry-title"><a href="<?php echo base_url('view/article/' . $popular_news[8]->alias); ?>"><?php echo $popular_news[8]->title; ?></a></h3>
-                                <div class="entry-meta small"><i class="fa fa-clock-o"></i> 12:27 pm <i
-                                        class="fa fa-calendar"></i> 25 Nov 2013
+                            <div class="media-body">
+                                <h3 class="entry-title">
+                                    <a href="<?php echo base_url('view/article/' . $popular_news[8]->alias); ?>">
+                                        <?php echo $popular_news[8]->title; ?>
+                                    </a>
+                                </h3>
+                                <div class="entry-meta small">
+                                    <i class="fa fa-clock-o"></i> <?php echo date('H:i', strtotime($popular_news[8]->post_on));?>
+                                    <i class="fa fa-calendar"></i> <?php echo date('d-m-Y', strtotime($popular_news[8]->post_on));?>
                                 </div>
                             </div>
                         </div>
                         <div class="media">
-                            <div class="pull-left"><a href="indexcb8c.html?p=318"><img width="64" height="64"
-                                                                                       src="<?php echo base_url();?>assets/frontend/wp-content/uploads/2014/01/<?php echo $popular_news[6]->img ?>"
-                                                                                       class="img-responsive wp-post-image"
-                                                                                       alt="28"
-                                                                                       sizes="(max-width: 64px) 100vw, 64px"/></a>
+                            <div class="pull-left"><a href="<?php echo base_url('view/article/' . $popular_news[6]->alias); ?>">
+                                    <img width="64" height="64"
+                                       src="<?php echo base_url();?><?php echo $popular_news[6]->img ?>"
+                                       class="img-responsive wp-post-image"
+                                       alt="28"
+                                       sizes="(max-width: 64px) 100vw, 64px"/>
+                                </a>
                             </div>
-                            <div class="media-body"><h3 class="entry-title"><a href="<?php echo base_url('view/article/' . $popular_news[6]->alias); ?>"><?php echo $popular_news[6]->title; ?></a></h3>
-                                <div class="entry-meta small"><i class="fa fa-clock-o"></i> 10:01 am <i
-                                        class="fa fa-calendar"></i> 25 Nov 2013
+                            <div class="media-body">
+                                <h3 class="entry-title">
+                                    <a href="<?php echo base_url('view/article/' . $popular_news[6]->alias); ?>">
+                                        <?php echo $popular_news[6]->title; ?>
+                                    </a>
+                                </h3>
+                                <div class="entry-meta small">
+                                    <i class="fa fa-clock-o"></i> <?php echo date('H:i', strtotime($popular_news[6]->post_on));?>
+                                    <i class="fa fa-calendar"></i> <?php echo date('d-m-Y', strtotime($popular_news[6]->post_on));?>
                                 </div>
                             </div>
                         </div>
