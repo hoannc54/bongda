@@ -85,17 +85,17 @@
                 $x3 = $pteam1/($pteam1+$pteam2+1);
                 $kq = ($x1+$x2+$x3)/3;
                 //Vi tri tren bang xep hang
-                echo "<br>";
-                echo "<h3>Tỷ lệ thắng của  ". $doi1." la </h3>".$kq;
-                echo "<br>";
-                echo "<h3> Theo tính toán của hệ thống: </h3>";
-                echo "<br>";
-                echo "<h4>So về Lich su thi dau: Tỷ lệ thắng trên sân nhà của đội chủ nhà là:</h4>".$x1;
-                echo "<br>";
-                echo "<h4>So về Phong độ hiện tại: Tỷ lệ thắng trên sân nhà của đội chủ nhà là:</h4>".$x2;
-                echo "<br>";
-                echo "<h4>So về Vị trí trên bảng xếp hạng: Tỷ lệ thắng trên sân nhà của đội chủ nhà là:</h4>".$x3;
-                echo "<br>";
+//                echo "<br>";
+//                echo "<h3>Tỷ lệ thắng của  ". $doi1." la </h3>".$kq;
+//                echo "<br>";
+//                echo "<h3> Theo tính toán của hệ thống: </h3>";
+//                echo "<br>";
+//                echo "<h4>So về Lich su thi dau: Tỷ lệ thắng trên sân nhà của đội chủ nhà là:</h4>".$x1;
+//                echo "<br>";
+//                echo "<h4>So về Phong độ hiện tại: Tỷ lệ thắng trên sân nhà của đội chủ nhà là:</h4>".$x2;
+//                echo "<br>";
+//                echo "<h4>So về Vị trí trên bảng xếp hạng: Tỷ lệ thắng trên sân nhà của đội chủ nhà là:</h4>".$x3;
+//                echo "<br>";
                 ?>
 
                 <div class="results type-results status-publish has-post-thumbnail">
@@ -113,15 +113,15 @@
                                         <img src="<?php echo base_url()?>assets/frontend/wp-content/uploads/2013/11/011.png"" alt="Liverpool">
                                     </div>
                                     <div class="media-body">
-                                        <h4>Liverpool</h4>
+                                        <h4><?php echo $doi1;?></h4>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-xs-4 score">
-                                <span class="label label-info">40%</span>
+                                <span class="label label-info"><?php echo round($kq*100,2);?>%</span>
                                 -
-                                <span class="label label-success">50%</span>
+                                <span class="label label-success"><?php echo 100-round($kq*100,2);?>%</span>
                             </div>
 
                             <div class="col-xs-4">
@@ -130,7 +130,7 @@
                                         <img src="<?php echo base_url()?>assets/frontend/wp-content/uploads/2013/11/011.png"" alt="Liverpool">
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="pull-right">Roma</h4>
+                                        <h4 class="pull-right"><?php echo $doi2;?></h4>
                                     </div>
                                 </div>
                             </div>
@@ -139,35 +139,35 @@
                         <div class="">
                             <div class="row" style="padding-top: 20px">
                                 <div class="col-xs-4">
-                                    <span class="label label-info text-left">50%</span>
+                                    <span class="label label-info text-left"><?php echo round($x1*100,2);?>%</span>
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     <span class="label label-warning">Lịch sử thi đấu</span>
                                 </div>
                                 <div class="col-xs-4 text-right">
-                                    <span class="label label-success pull-right">40%</span>
+                                    <span class="label label-success pull-right"><?php echo 100-round($x1*100,2);?>%</span>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 20px">
                                 <div class="col-xs-4">
-                                    <span class="label label-info text-left">50%</span>
+                                    <span class="label label-info text-left"><?php echo round($x2*100,2);?>%</span>
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     <span class="label label-warning">Phong độ</span>
                                 </div>
                                 <div class="col-xs-4 text-right">
-                                    <span class="label label-success pull-right">40%</span>
+                                    <span class="label label-success pull-right"><?php echo 100-round($x2*100,2);?>%</span>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 20px">
                                 <div class="col-xs-4">
-                                    <span class="label label-info text-left">50%</span>
+                                    <span class="label label-info text-left"><?php echo round($x3*100,2);?>%</span>
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     <span class="label label-warning">Bảng xếp hạng</span>
                                 </div>
                                 <div class="col-xs-4 text-right">
-                                    <span class="label label-success pull-right">40%</span>
+                                    <span class="label label-success pull-right"><?php echo 100-round($x3*100,2);?>%</span>
                                 </div>
 
                             </div>

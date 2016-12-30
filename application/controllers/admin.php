@@ -8,16 +8,20 @@ class Admin extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('users_model');
+        $this->load->model('articles_model');
+        $this->load->model('tickets_model');
         if (check_admin() == false) {
             redirect(base_url());
-
         }
     }
 
     public function index(){
         $data['count_users'] = $this->users_model->countUsers();
+        $data['count_articles'] = $this->articles_model->countArticles();
+        $data['count_deals'] = $this->tickets_model->countDeals();
         $this->load->view('backend/index', $data);
     }
+
 
     // thêm bài viết mới
     public function add_article() {
@@ -36,7 +40,22 @@ class Admin extends CI_Controller {
             if ($this->form_validation->run() === true) {
                 // Thông báo thành công
                 $this->load->model('articles_model');
-                if ($this->articles_model->addArticle() == true) {
+                $upload_dir = './asserts/images';
+                if (is_dir($upload_dir) && is_writable($upload_dir)) {  // kiểm tra thư mục
+                    // xử lý tên file
+                    $name = explode('.', $_FILES['image']['name']);     // tách tên theo ký tự dot
+                    $ext = strtolower(end($name));                      // lấy phần mở rộng trong tên
+                   // array_pop($name);                                   // bỏ phần đuôi trong tên
+                   // $name = implode("_", $name);                        // gộp lại các phần của tên bằng dấu underscore
+                    $name = url_title($name, '_', true);                // chuẩn hoá tên
+                    // chuyển file về thư mục $assert_dir
+                    $image_file = $upload_dir . $name . '.' . $ext;
+                    move_uploaded_file($_FILES['image']['tmp_name'], $image_file);
+                    $this->load->model('videos_model');
+                    $img = substr($image_file, 2);                 // loại bỏ 2 ký tự đầu tiên './'
+                    $this->videos_model->addArticle($img);
+                }
+                    if ($this->articles_model->addArticle($img) == true) {
                     $this->session->set_flashdata('message', '<div class="alert alert-success">Thêm bài viết mới thành công!</div>');
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');

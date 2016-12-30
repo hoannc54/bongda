@@ -6,6 +6,8 @@ class Account extends CI_Controller {
 
     public function login() {
         $this->load->helper('form');
+        $this->load->model('articles_model');
+        $data['popular_news'] = $this->articles_model->getListArticles(16,0);
         if ($this->input->post('submit')) {
             $this->load->library('form_validation');
             $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
@@ -41,6 +43,8 @@ class Account extends CI_Controller {
 
     public function signup() {
         $this->load->helper('form');
+        $this->load->model('articles_model');
+        $data['popular_news'] = $this->articles_model->getListArticles(16,0);
         if ($this->input->post('submit')) {
             $this->load->library('form_validation');
             

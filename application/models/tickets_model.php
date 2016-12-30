@@ -70,4 +70,8 @@ class Tickets_Model extends CI_Model{
         $this->db->where('id', $id);
         return $this->db->delete('order_detail');
     }
+    public function countDeals() {
+        return $this->db->count_all_results('orders');
+    }
+
 }
