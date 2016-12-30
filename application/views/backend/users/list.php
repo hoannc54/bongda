@@ -45,13 +45,13 @@
                                                     echo '<label class="label label-warning">User</label>';
                                                     break;
                                                 case 1:
-                                                    echo '<label class="label label-warning">Admod</label>';
+                                                    echo '<label class="label label-warning">Admin</label>';
                                                     break;
                                                 case 2:
-                                                    echo '<label class="label label-warning">Manager</label>';
+                                                    echo '<label class="label label-warning">TicketManager</label>';
                                                     break;
                                                 case 3:
-                                                    echo '<label class="label label-warning">Admin</label>';
+                                                    echo '<label class="label label-warning">ArticleManager</label>';
                                                     break;
                                             }
                                         ?>

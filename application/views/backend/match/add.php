@@ -65,6 +65,23 @@
                             </div>
                             <div class="form-group">
                                 <label for="username">team1</label>
+<!--                                <form action="--><?php //echo base_url();?><!--admin/add_match" method="post">-->
+<!--                                    <select name = 'doi1'>-->
+<!--                                        <option value="Real Madrid">Real Madrid</option>-->
+<!--                                        <option value="Barcelona">Barcelona</option>-->
+<!--                                        <option value="Sevilla">Sevilla</option>-->
+<!--                                        <option value="Ath Madrid">Ath Madrid</option>-->
+<!--                                        <option value="Merida">Merida</option>-->
+<!--                                        <option value="Ath Bilbao">Ath Bilbao</option>-->
+<!--                                        <option value="Betis">Betis</option>-->
+<!--                                        <option value="Celta">Celta</option>-->
+<!--                                        <option value="Espanol">Espanol</option>-->
+<!--                                        <option value="Osasuna">Osasuna</option>-->
+<!--                                        <option value="Valencia">Valencia</option>-->
+<!--                                        <option value="Sevilla">Sevilla</option>-->
+<!--                                    </select>-->
+<!--                                    <input type="submit" name="submit" value="Go"/>-->
+<!--                                </form>-->
                                 <input type="text" class="form-control" id="team1" placeholder="team1"
                                        name="team1" value="<?php echo set_value('team1');?>">
                             </div>

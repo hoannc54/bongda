@@ -9,9 +9,9 @@ class TicketManager extends CI_Controller {
         parent::__construct();
         $this->load->model('users_model');
         $this->load->model('articles_model');
-        if (check_admin() == false) {
-            redirect(base_url());
-        }
+//        if (check_admin() == false) {
+//            redirect(base_url());
+//        }
     }
 
     public function index(){

@@ -10,9 +10,9 @@ class Admin extends CI_Controller {
         $this->load->model('users_model');
         $this->load->model('articles_model');
         $this->load->model('tickets_model');
-        if (check_admin() == false) {
-            redirect(base_url());
-        }
+//        if (check_admin() == false) {
+//            redirect(base_url());
+//        }
     }
 
     public function index(){
@@ -456,6 +456,10 @@ class Admin extends CI_Controller {
     }
     public function add_match(){
         $this->load->helper('form');
+        if($this->input->post('submit')){
+            $this->load->library('form_validation');
+            $data['doi1'] = $this->input->post('doi1');
+        }
         if ($this->input->post()) {
             $this->load->library('form_validation');
             $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');

@@ -44,9 +44,9 @@
                                     <label for="exampleInputEmail1">Phân quyền</label>
                                     <select class="form-control" name="user_level">
                                         <option value="0" <?php if ($user['user_level'] == 0) { echo "selected";}?>>User</option>
-                                        <option value="1" <?php if ($user['user_level'] == 1) { echo "selected";}?>>Admod</option>
-                                        <option value="2" <?php if ($user['user_level'] == 2) { echo "selected";}?>>Manger</option>
-                                        <option value="3" <?php if ($user['user_level'] == 3) { echo "selected";}?>>Admin</option>
+                                        <option value="1" <?php if ($user['user_level'] == 1) { echo "selected";}?>>Admin</option>
+                                        <option value="2" <?php if ($user['user_level'] == 2) { echo "selected";}?>>TicketManger</option>
+                                        <option value="3" <?php if ($user['user_level'] == 3) { echo "selected";}?>>ArticleManager</option>
                                     </select>
                                 </div>
                             </div><!-- /.box-body -->

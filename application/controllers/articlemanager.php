@@ -3,15 +3,15 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class ArticlesManager extends CI_Controller {
+class ArticleManager extends CI_Controller {
 
     function __construct() {
         parent::__construct();
         $this->load->model('users_model');
         $this->load->model('articles_model');
-        if (check_admin() == false) {
-            redirect(base_url());
-        }
+//        if (check_admin() == false) {
+//            redirect(base_url());
+//        }
     }
 
     public function index(){
@@ -133,7 +133,7 @@ class ArticlesManager extends CI_Controller {
         $per_page = 10;
         $this->load->model('articles_model');
         $mount = $this->articles_model->countArticles();
-        config_paginator('admin/articles_manager', $mount, $per_page);
+        config_paginator('articlemanager/articles_manager', $mount, $per_page);
         $data['list_articles'] = $this->articles_model->getListArticlesForManager($per_page, ($page - 1) * $per_page);
 
         $data['title'] = 'Articles Manager';
@@ -144,7 +144,7 @@ class ArticlesManager extends CI_Controller {
 
     public function edit_article($alias = '') {
         if (!isset($alias) || empty($alias)) {
-            redirect('admin/articles_manager');
+            redirect('articlemanager/articles_manager');
         }
         $this->load->model('articles_model');
         $data['article'] = $this->articles_model->getArticleByAlias($alias);
@@ -169,7 +169,7 @@ class ArticlesManager extends CI_Controller {
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
                 }
-                redirect('admin/articles_manager');
+                redirect('articlemanager/articles_manager');
             }
         }
 
@@ -191,7 +191,7 @@ class ArticlesManager extends CI_Controller {
     // xoá bài viết
     public function delete_article($alias) {
         if (!isset($alias) || empty($alias)) {
-            redirect('admin/articles_manager');
+            redirect('articlemanager/articles_manager');
         }
         $this->load->model('articles_model');
         if ($this->articles_model->delete_article($alias) == true) {
@@ -199,7 +199,7 @@ class ArticlesManager extends CI_Controller {
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
         }
-        redirect('admin/articles_manager');
+        redirect('articlemanager/articles_manager');
     }
     public function videos_manager($page = 1) {
         $per_page = 10;      // số bài viết trên một trang
@@ -218,7 +218,7 @@ class ArticlesManager extends CI_Controller {
     // xoá bài viết
     public function delete_video($alias) {
         if (!isset($alias) || empty($alias)) {
-            redirect('admin/articles_manager');
+            redirect('articlemanager/articles_manager');
         }
         $this->load->model('videos_model');
         if ($this->videos_model->delete_video($alias) == true) {
@@ -227,7 +227,7 @@ class ArticlesManager extends CI_Controller {
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger">Đã có lỗi xảy ra!</div>');
         }
-        redirect('admin/articles_manager');
+        redirect('articlemanager/articles_manager');
     }
 
 }

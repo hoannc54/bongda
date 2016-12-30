@@ -56,6 +56,12 @@
                             <?php if (check_admin() == true) { ?>
                                 <li><a href="<?php echo base_url();?>admin/articles_manager"><span class="glyphicon glyphicon-th-list"></span> Quản lý</a></li>
                             <?php } ?>
+                            <?php if (check_TicketManager() == true) { ?>
+                                <li><a href="<?php echo base_url();?>ticketmanager/tickets_manager"><span class="glyphicon glyphicon-th-list"></span> Quản lý Vé</a></li>
+                            <?php } ?>
+                            <?php if (check_ArticleManager() == true) { ?>
+                                <li><a href="<?php echo base_url();?>articlemanager/articles_manager"><span class="glyphicon glyphicon-th-list"></span> Quản lý bài viết</a></li>
+                            <?php } ?>
                             <?php if (check_login() == true) { ?>
                                 <li><a><span class="glyphicon glyphicon-user"></span> Xin chào <?php echo $this->session->userdata('username') ?></a></li>
                                 <li><a href="account/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
